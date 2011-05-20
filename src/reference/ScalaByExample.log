@@ -1,0 +1,1829 @@
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.3.25)  20 MAY 2011 15:40
+entering extended mode
+ %&-line parsing enabled.
+**ScalaByExample.tex
+(./ScalaByExample.tex
+LaTeX2e <2009/09/24>
+Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
+yphenation, spanish, galician, catalan, loaded.
+(/usr/share/texmf-texlive/tex/latex/base/book.cls
+Document Class: book 2007/10/19 v1.4h Standard LaTeX document class
+(/usr/share/texmf-texlive/tex/latex/base/bk12.clo
+File: bk12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) (./scaladoc.sty
+Package: scaladoc 2003/08/27 v0.1 Scala style customization
+
+(/usr/share/texmf-texlive/tex/latex/fourier/fourier.sty
+Package: fourier 2005/01/01 1.4 fourier-GUTenberg package
+
+(/usr/share/texmf-texlive/tex/latex/base/fontenc.sty
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+(/usr/share/texmf-texlive/tex/latex/base/t1enc.def
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+))
+(/usr/share/texmf-texlive/tex/latex/base/textcomp.sty
+Package: textcomp 2005/09/27 v1.99g Standard LaTeX package
+Package textcomp Info: Sub-encoding information:
+(textcomp)               5 = only ISO-Adobe without \textcurrency
+(textcomp)               4 = 5 + \texteuro
+(textcomp)               3 = 4 + \textohm
+(textcomp)               2 = 3 + \textestimated + \textcurrency
+(textcomp)               1 = TS1 - \textcircled - \t
+(textcomp)               0 = TS1 (full)
+(textcomp)             Font families with sub-encoding setting implement
+(textcomp)             only a restricted character set as indicated.
+(textcomp)             Family '?' is the default used for unknown fonts.
+(textcomp)             See the documentation for details.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 71.
+
+(/usr/share/texmf-texlive/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+)
+LaTeX Info: Redefining \oldstylenums on input line 266.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 281.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 282.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 283.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 284.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 285.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 286.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 287.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 288.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 289.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 290.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 291.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 292.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 293.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 294.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 295.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 296.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 297.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 298.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 299.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 300.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 301.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 302.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 303.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 304.
+
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 305.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 306.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 307.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 308.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 309.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 310.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 311.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 312.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 313.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 314.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 315.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 316.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 317.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 318.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 319.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 320.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 321.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 322.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 323.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 324.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 325.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 326.
+)
+(/usr/share/texmf-texlive/tex/latex/fourier/fourier-orns.sty
+Package: fourier-orns 2004/01/30 1.1 fourier-ornaments package
+)
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 50.
+LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
+(Font)              `operators' in the math version `normal' on input line 50.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> T1/futs/m/n on input line 50.
+LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
+(Font)              `operators' in the math version `bold' on input line 50.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> T1/futs/m/n on input line 50.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  T1/futs/m/n --> T1/futs/b/n on input line 51.
+LaTeX Font Info:    Redeclaring symbol font `letters' on input line 59.
+LaTeX Font Info:    Encoding `OML' has changed to `FML' for symbol font
+(Font)              `letters' in the math version `normal' on input line 59.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> FML/futmi/m/it on input line 59.
+LaTeX Font Info:    Encoding `OML' has changed to `FML' for symbol font
+(Font)              `letters' in the math version `bold' on input line 59.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> FML/futmi/m/it on input line 59.
+\symotherletters=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  FML/futmi/m/it --> FML/futmi/b/it on input line 61.
+LaTeX Font Info:    Overwriting symbol font `otherletters' in version `bold'
+(Font)                  FML/futm/m/it --> FML/futm/b/it on input line 62.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 63.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 64.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 65.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 66.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 67.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 68.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 69.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 70.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 71.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 72.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 73.
+LaTeX Font Info:    Redeclaring symbol font `symbols' on input line 113.
+LaTeX Font Info:    Encoding `OMS' has changed to `FMS' for symbol font
+(Font)              `symbols' in the math version `normal' on input line 113.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> FMS/futm/m/n on input line 113.
+LaTeX Font Info:    Encoding `OMS' has changed to `FMS' for symbol font
+(Font)              `symbols' in the math version `bold' on input line 113.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> FMS/futm/m/n on input line 113.
+LaTeX Font Info:    Redeclaring symbol font `largesymbols' on input line 114.
+LaTeX Font Info:    Encoding `OMX' has changed to `FMX' for symbol font
+(Font)              `largesymbols' in the math version `normal' on input line 1
+14.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> FMX/futm/m/n on input line 114.
+LaTeX Font Info:    Encoding `OMX' has changed to `FMX' for symbol font
+(Font)              `largesymbols' in the math version `bold' on input line 114
+.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> FMX/futm/m/n on input line 114.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 115.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> T1/futs/bx/n on input line 115.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> T1/futs/bx/n on input line 115.
+LaTeX Font Info:    Redeclaring math alphabet \mathrm on input line 116.
+LaTeX Font Info:    Redeclaring math alphabet \mathit on input line 117.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> T1/futs/m/it on input line 117.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> T1/futs/m/it on input line 117.
+LaTeX Font Info:    Redeclaring math alphabet \mathcal on input line 118.
+LaTeX Font Info:    Redeclaring math symbol \parallel on input line 134.
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 148.
+LaTeX Font Info:    Redeclaring math symbol \varkappa on input line 186.
+LaTeX Font Info:    Redeclaring math symbol \varvarrho on input line 187.
+LaTeX Font Info:    Redeclaring math delimiter \Vert on input line 210.
+LaTeX Font Info:    Redeclaring math delimiter \vert on input line 215.
+LaTeX Font Info:    Redeclaring math delimiter \Downarrow on input line 225.
+LaTeX Font Info:    Redeclaring math delimiter \backslash on input line 227.
+LaTeX Font Info:    Redeclaring math delimiter \rangle on input line 229.
+LaTeX Font Info:    Redeclaring math delimiter \langle on input line 231.
+LaTeX Font Info:    Redeclaring math delimiter \rbrace on input line 233.
+LaTeX Font Info:    Redeclaring math delimiter \lbrace on input line 235.
+LaTeX Font Info:    Redeclaring math delimiter \rceil on input line 237.
+LaTeX Font Info:    Redeclaring math delimiter \lceil on input line 239.
+LaTeX Font Info:    Redeclaring math delimiter \rfloor on input line 241.
+LaTeX Font Info:    Redeclaring math delimiter \lfloor on input line 243.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 247.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 248.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 249.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 250.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 251.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 252.
+LaTeX Font Info:    Redeclaring math accent \check on input line 253.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 254.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 255.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 256.
+\symUfutm=\mathgroup5
+) (./luximono.sty
+Package: luximono 2004/01/26 loading LuxiMono as tt font (WaS)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/keyval.sty
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
+\KV@toks@=\toks14
+))
+(/usr/share/texmf-texlive/tex/latex/psnfss/helvet.sty
+Package: helvet 2005/04/12 PSNFSS-v9.2a (WaS) 
+)
+(/usr/share/texmf-texlive/tex/latex/graphics/color.sty
+Package: color 2005/11/14 v1.0j Standard LaTeX Color (DPC)
+
+(/etc/texmf/tex/latex/config/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 130.
+
+(/usr/share/texmf-texlive/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2010/03/12 v0.04p Graphics/color for pdfTeX
+\Gread@gobject=\count88
+))
+(/usr/share/texmf-texlive/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2001/02/13 v0.1j Color table columns (DPC)
+
+(/usr/share/texmf-texlive/tex/latex/tools/array.sty
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen103
+\extrarowheight=\dimen104
+\NC@list=\toks15
+\extratabsurround=\skip43
+\backup@length=\skip44
+)
+\everycr=\toks16
+\minrowclearance=\skip45
+)
+(/usr/share/texmf-texlive/tex/latex/ntgclass/a4.sty
+Package: a4 2004/04/15 v1.2g A4 based page layout
+)
+(/usr/share/texmf-texlive/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2009/04/10 v2.0 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in pdf mode detected.
+)
+(/usr/share/texmf-texlive/tex/latex/caption/caption2.sty
+Package: caption2 2008/07/01 v2.2c Customising captions (AS)
+
+
+Package caption2 Warning: ****************************************************
+(caption2)                THIS PACKAGE IS OBSOLETE:
+(caption2)                This package attempts to provide an `caption2'
+(caption2)                package v2.0/2.1 author environment so that OLD
+(caption2)                documents can be successfully processed. It should
+(caption2)                NOT be used for NEW documents! New documents should
+(caption2)                use the regular `caption' package v3.x instead.
+(caption2)                ****************************************************
+
+(/usr/share/texmf-texlive/tex/latex/caption/caption3.sty
+Package: caption3 2009/10/09 v3.1k caption3 kernel (AR)
+\captionmargin=\dimen105
+\captionmargin@=\dimen106
+\captionwidth=\dimen107
+\caption@indent=\dimen108
+\caption@parindent=\dimen109
+\caption@hangindent=\dimen110
+)
+Package caption2 Info: Running in caption2 v2.0 compatibility mode on input lin
+e 209.
+\captionlinewidth=\dimen111
+\realcaptionwidth=\dimen112
+)
+(/usr/share/texmf-texlive/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2007/08/12 v2.8 Sectioning titles
+\ttl@box=\box26
+\beforetitleunit=\skip46
+\aftertitleunit=\skip47
+\ttl@plus=\dimen113
+\ttl@minus=\dimen114
+\ttl@toksa=\toks17
+\titlewidth=\dimen115
+\titlewidthlast=\dimen116
+\titlewidthfirst=\dimen117
+)
+(/usr/share/texmf-texlive/tex/latex/titlesec/ttlkeys.def
+File: ttlkeys.def 2007/08/12
+\c@ttlp@side=\count89
+\ttlp@side=\count90
+)
+(/usr/share/texmf-texlive/tex/latex/titlesec/block.tss
+File: block.tss 2007/08/12
+)
+(/usr/share/texmf-texlive/tex/latex/footmisc/footmisc.sty
+Package: footmisc 2009/09/15 v5.5a a miscellany of footnote facilities
+\FN@temptoken=\toks18
+\footnotemargin=\dimen118
+\c@pp@next@reset=\count91
+Package footmisc Info: Declaring symbol style bringhurst on input line 855.
+Package footmisc Info: Declaring symbol style chicago on input line 863.
+Package footmisc Info: Declaring symbol style wiley on input line 872.
+Package footmisc Info: Declaring symbol style lamport-robust on input line 883.
+
+Package footmisc Info: Declaring symbol style lamport* on input line 903.
+Package footmisc Info: Declaring symbol style lamport*-robust on input line 924
+.
+)
+(/usr/share/texmf-texlive/tex/latex/fancyhdr/fancyhdr.sty
+\fancy@headwidth=\skip48
+\f@ncyO@elh=\skip49
+\f@ncyO@erh=\skip50
+\f@ncyO@olh=\skip51
+\f@ncyO@orh=\skip52
+\f@ncyO@elf=\skip53
+\f@ncyO@erf=\skip54
+\f@ncyO@olf=\skip55
+\f@ncyO@orf=\skip56
+) (./tweaklist.sty)
+(/usr/share/texmf-texlive/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2009/10/09 v6.79a Hypertext links for LaTeX
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/ifvtex.sty
+Package: ifvtex 2008/11/04 v1.4 Switches for detecting VTeX and its modes (HO)
+Package ifvtex Info: VTeX not detected.
+)
+(/usr/share/texmf-texlive/tex/generic/ifxetex/ifxetex.sty
+Package: ifxetex 2009/01/23 v0.5 Provides ifxetex conditional
+)
+(/usr/share/texmf-texlive/tex/latex/oberdiek/hycolor.sty
+Package: hycolor 2009/10/02 v1.5 Code for color options of hyperref/bookmark (H
+O)
+
+(/usr/share/texmf-texlive/tex/latex/oberdiek/xcolor-patch.sty
+Package: xcolor-patch 2009/10/02 xcolor patch
+))
+\@linkdim=\dimen119
+\Hy@linkcounter=\count92
+\Hy@pagecounter=\count93
+
+(/usr/share/texmf-texlive/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2009/10/09 v6.79a Hyperref: PDFDocEncoding definition (HO)
+)
+(/usr/share/texmf-texlive/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2007/12/12 v1.2 Prefix for e-TeX command names (HO)
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2007/09/09 v1.2 Providing info/warning/message (HO)
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)
+(/usr/share/texmf-texlive/tex/latex/latexconfig/hyperref.cfg
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+(/usr/share/texmf-texlive/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2009/08/13 v3.4 Keyval support for LaTeX options (HO)
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2009/07/30 v1.5 Key value parser with default handler suppor
+t (HO)
+))
+Package hyperref Info: Option `hyperindex' set `true' on input line 2864.
+Package hyperref Info: Option `plainpages' set `false' on input line 2864.
+Package hyperref Info: Option `breaklinks' set `true' on input line 2864.
+Package hyperref Info: Option `colorlinks' set `true' on input line 2864.
+
+
+Package hyperref Warning: Option `pagecolor' is not available anymore.
+
+Package hyperref Info: Hyper figures OFF on input line 2975.
+Package hyperref Info: Link nesting OFF on input line 2980.
+Package hyperref Info: Hyper index ON on input line 2983.
+Package hyperref Info: Plain pages OFF on input line 2990.
+Package hyperref Info: Backreferencing OFF on input line 2995.
+Implicit mode ON; LaTeX internals redefined
+Package hyperref Info: Bookmarks ON on input line 3191.
+(/usr/share/texmf-texlive/tex/latex/ltxmisc/url.sty
+\Urlmuskip=\muskip10
+Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 3428.
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/bitset.sty
+Package: bitset 2007/09/28 v1.0 Data type bit set (HO)
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/intcalc.sty
+Package: intcalc 2007/09/27 v1.1 Expandable integer calculations (HO)
+)
+(/usr/share/texmf-texlive/tex/generic/oberdiek/bigintcalc.sty
+Package: bigintcalc 2007/11/11 v1.1 Expandable big integer calculations (HO)
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2009/09/23 v0.6 LuaTeX support for pdfTeX utility functions
+ (HO)
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2009/04/17 v1.2 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/share/texmf-texlive/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2009/08/05 v1.0 Some LaTeX kernel commands for general use (HO
+)
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+)))
+\Fld@menulength=\count94
+\Field@Width=\dimen120
+\Fld@charsize=\dimen121
+\Field@toks=\toks19
+Package hyperref Info: Hyper figures OFF on input line 4377.
+Package hyperref Info: Link nesting OFF on input line 4382.
+Package hyperref Info: Hyper index ON on input line 4385.
+Package hyperref Info: backreferencing OFF on input line 4392.
+Package hyperref Info: Link coloring ON on input line 4395.
+Package hyperref Info: Link coloring with OCG OFF on input line 4402.
+Package hyperref Info: PDF/A mode OFF on input line 4407.
+
+(/usr/share/texmf-texlive/tex/generic/oberdiek/atbegshi.sty
+Package: atbegshi 2008/07/31 v1.9 At begin shipout hook (HO)
+)
+\Hy@abspage=\count95
+\c@Item=\count96
+\c@Hfootnote=\count97
+)
+*hyperref using driver hpdftex*
+(/usr/share/texmf-texlive/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2009/10/09 v6.79a Hyperref driver for pdfTeX
+\Fld@listcount=\count98
+)
+(/usr/share/texmf-texlive/tex/latex/graphics/graphicx.sty
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/graphics.sty
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/share/texmf-texlive/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/etc/texmf/tex/latex/config/graphics.cfg
+File: graphics.cfg 2009/08/28 v1.8 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+)
+\Gin@req@height=\dimen122
+\Gin@req@width=\dimen123
+)
+(/usr/share/texmf-texlive/tex/generic/thumbpdf/thumbpdf.sty
+Package: thumbpdf 2008/04/16 v3.10 Inclusion of thumbnails (HO)
+
+
+Package thumbpdf Warning: Thumbnail data file `ScalaByExample.tpt' not found.
+
+) (/usr/share/texmf-texlive/tex/latex/listings/listings.sty
+\lst@mode=\count99
+\lst@gtempboxa=\box27
+\lst@token=\toks20
+\lst@length=\count100
+\lst@currlwidth=\dimen124
+\lst@column=\count101
+\lst@pos=\count102
+\lst@lostspace=\dimen125
+\lst@width=\dimen126
+\lst@newlines=\count103
+\lst@lineno=\count104
+\lst@maxwidth=\dimen127
+
+(/usr/share/texmf-texlive/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
+\c@lstnumber=\count105
+\lst@skipnumbers=\count106
+\lst@framebox=\box28
+)
+(/usr/share/texmf-texlive/tex/latex/listings/listings.cfg
+File: listings.cfg 2007/02/22 1.4 listings configuration
+))
+Package: listings 2007/02/22 1.4 (Carsten Heinz)
+)
+(/usr/share/texmf-texlive/tex/latex/base/fleqn.sty
+
+LaTeX Warning: inputting `fleqn.clo' instead of obsolete `fleqn.sty'.
+
+(/usr/share/texmf-texlive/tex/latex/base/fleqn.clo
+File: fleqn.clo 1998/08/17 v1.1c Standard LaTeX option (flush left equations)
+\mathindent=\dimen128
+)) (./modefs.sty) (./math.sty
+\c@Example=\count107
+\c@result=\count108
+) (./scaladefs.sty) (./ScalaByExample.aux)
+\openout1 = `ScalaByExample.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for FML/futm/m/it on input line 27.
+LaTeX Font Info:    Try loading font information for FML+futm on input line 27.
+
+
+(/usr/share/texmf-texlive/tex/latex/fourier/fmlfutm.fd
+File: fmlfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futm.
+)
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for FMS/futm/m/n on input line 27.
+LaTeX Font Info:    Try loading font information for FMS+futm on input line 27.
+
+
+(/usr/share/texmf-texlive/tex/latex/fourier/fmsfutm.fd
+File: fmsfutm.fd 2004/10/30 Fontinst v1.926 font definitions for FMS/futm.
+)
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for FMX/futm/m/n on input line 27.
+LaTeX Font Info:    Try loading font information for FMX+futm on input line 27.
+
+
+(/usr/share/texmf-texlive/tex/latex/fourier/fmxfutm.fd
+File: fmxfutm.fd futm-extension
+)
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 27.
+
+(/usr/share/texmf-texlive/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Try loading font information for T1+futs on input line 27.
+
+(/usr/share/texmf-texlive/tex/latex/fourier/t1futs.fd
+File: t1futs.fd 2004/03/02 Fontinst v1.926 font definitions for T1/futs.
+)
+(/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count109
+\scratchdimen=\dimen129
+\scratchbox=\box29
+\nofMPsegments=\count110
+\nofMParguments=\count111
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count112
+\MPscratchDim=\dimen130
+\MPnumerator=\count113
+\everyMPtoPDFconversion=\toks22
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+Package hyperref Info: Link coloring ON on input line 27.
+ (/usr/share/texmf-texlive/tex/latex/hyperref/nameref.sty
+Package: nameref 2007/05/29 v2.31 Cross-referencing by name of section
+
+(/usr/share/texmf-texlive/tex/latex/oberdiek/refcount.sty
+Package: refcount 2008/08/11 v3.1 Data extraction from references (HO)
+)
+\c@section@level=\count114
+)
+LaTeX Info: Redefining \ref on input line 27.
+LaTeX Info: Redefining \pageref on input line 27.
+
+(./ScalaByExample.out) (./ScalaByExample.out)
+\@outlinefile=\write3
+\openout3 = `ScalaByExample.out'.
+
+\AtBeginShipoutBox=\box30
+\c@lstlisting=\count115
+LaTeX Font Info:    Try loading font information for FML+futmi on input line 30
+.
+
+(/usr/share/texmf-texlive/tex/latex/fourier/fmlfutmi.fd
+File: fmlfutmi.fd 2004/10/30 Fontinst v1.926 font definitions for FML/futmi.
+)
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 11.03998pt on input line 30.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 8.27998pt on input line 30.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 6.43999pt on input line 30.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 11.03998pt on input line 30.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 8.27998pt on input line 30.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 6.43999pt on input line 30.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 30.
+
+(/usr/share/texmf-texlive/tex/latex/psnfss/t1phv.fd
+File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
+)
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <20.74> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 30.
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--30
+
+ []
+
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 19.08076pt on input line 30.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 13.24796pt on input line 30.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 9.19998pt on input line 30.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 19.08076pt on input line 30.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 13.24796pt on input line 30.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 9.19998pt on input line 30.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <12> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 30.
+
+Underfull \hbox (badness 10000) in paragraph at lines 30--30
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [1
+
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
+
+]
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <24.88> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 32.
+ (./ScalaByExample.toc
+LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <12> not available
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 1.
+ [3
+
+]
+Overfull \hbox (1.19994pt too wide) detected at line 88
+ []\T1/futs/m/n/12 103
+ []
+
+
+Overfull \hbox (1.19994pt too wide) detected at line 93
+ []\T1/futs/m/n/12 106
+ []
+
+
+Overfull \hbox (1.19994pt too wide) detected at line 94
+ []\T1/futs/m/n/12 107
+ []
+
+
+Underfull \vbox (badness 1603) has occurred while \output is active []
+
+ [4]
+Overfull \hbox (1.19994pt too wide) detected at line 99
+ []\T1/futs/m/n/12 125
+ []
+
+
+Overfull \hbox (1.19994pt too wide) detected at line 100
+ []\T1/futs/m/n/12 127
+ []
+
+
+Overfull \hbox (1.19994pt too wide) detected at line 101
+ []\T1/futs/m/n/12 127
+ []
+
+
+Overfull \hbox (1.19994pt too wide) detected at line 102
+ []\T1/futs/m/n/12 128
+ []
+
+
+Overfull \hbox (1.19994pt too wide) detected at line 103
+ []\T1/futs/m/n/12 129
+ []
+
+
+Overfull \hbox (1.19994pt too wide) detected at line 104
+ []\T1/futs/m/n/12 129
+ []
+
+
+Overfull \hbox (1.19994pt too wide) detected at line 105
+ []\T1/futs/m/n/12 130
+ []
+
+
+Overfull \hbox (1.19994pt too wide) detected at line 106
+ []\T1/futs/m/n/12 131
+ []
+
+
+Overfull \hbox (1.19994pt too wide) detected at line 107
+ []\T1/futs/m/n/12 132
+ []
+
+
+Overfull \hbox (2.06392pt too wide) detected at line 108
+\T1/futs/m/n/12 17.10 
+ []
+
+
+Overfull \hbox (1.19994pt too wide) detected at line 108
+ []\T1/futs/m/n/12 134
+ []
+
+
+Overfull \hbox (2.06392pt too wide) detected at line 109
+\T1/futs/m/n/12 17.11 
+ []
+
+
+Overfull \hbox (1.19994pt too wide) detected at line 109
+ []\T1/futs/m/n/12 137
+ []
+
+)
+\tf@toc=\write4
+\openout4 = `ScalaByExample.toc'.
+
+ [5] [6
+
+]
+Chapter 1.
+LaTeX Font Info:    Try loading font information for TS1+futs on input line 44.
+
+(/usr/share/texmf-texlive/tex/latex/fourier/ts1futs.fd
+File: ts1futs.fd 2004/03/26 Fontinst v1.926 font definitions for TS1/futs.
+)
+Underfull \hbox (badness 3118) in paragraph at lines 47--51
+[]\T1/futs/m/n/12 Pattern match-ing over class hi-er-ar-chies uni-fies func-tio
+nal and object-
+ []
+
+
+LaTeX Warning: Citation `abelson-sussman:structure' on page 1 undefined on inpu
+t line 73.
+
+(./ExamplesPart.tex [1
+
+] [2
+
+]
+Chapter 2.
+LaTeX Font Info:    Try loading font information for T1+ul9 on input line 14.
+LaTeX Font Info:    No file T1ul9.fd. on input line 14.
+
+LaTeX Font Warning: Font shape `T1/ul9/m/n' undefined
+(Font)              using `T1/cmr/m/n' instead on input line 14.
+
+
+LaTeX Font Warning: Font shape `T1/ul9/bx/n' undefined
+(Font)              using `T1/ul9/m/n' instead on input line 15.
+
+[3]
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 6.99199pt on input line 97.
+LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
+(Font)              scaled to size 5.51999pt on input line 97.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 6.99199pt on input line 97.
+LaTeX Font Info:    Font shape `U/futm/m/n' will be
+(Font)              scaled to size 5.51999pt on input line 97.
+ [4]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5]
+[6]
+Chapter 3.
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 216.
+LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <10.95> not available
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 231.
+[7
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 321--328
+[]\T1/futs/m/n/12 Reply mes-sages are sent us-ing syn-tax of the form
+ []
+
+[8] [9] [10]
+Chapter 4.
+LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 361.
+[11
+
+]
+Underfull \hbox (badness 1902) in paragraph at lines 409--412
+[]\T1/futs/m/n/12 How are ex-pres-sions eval-u-ated? An ex-pres-sion con-sist-i
+ng of op-er-a-tors and
+ []
+
+[12]
+Overfull \hbox (69.56378pt too wide) in paragraph at lines 452--453
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[13]
+
+LaTeX Font Warning: Font shape `T1/ul9/m/it' undefined
+(Font)              using `T1/ul9/m/n' instead on input line 544.
+
+
+Overfull \hbox (42.31036pt too wide) in paragraph at lines 544--545
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (69.56378pt too wide) in paragraph at lines 545--546
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][] 
+ []
+
+[14] [15] [16]
+Overfull \hbox (8.24359pt too wide) in paragraph at lines 693--695
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[17]
+Overfull \hbox (28.68365pt too wide) in paragraph at lines 731--732
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][] 
+ []
+
+
+Overfull \hbox (62.75043pt too wide) in paragraph at lines 757--758
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][] 
+ []
+
+[18] [19] [20
+
+]
+Chapter 5.
+
+Overfull \hbox (105.75183pt too wide) in paragraph at lines 843--844
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][] 
+ []
+
+
+Overfull \hbox (37.61829pt too wide) in paragraph at lines 845--846
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[21]
+Overfull \hbox (28.68365pt too wide) in paragraph at lines 866--867
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (76.37714pt too wide) in paragraph at lines 872--873
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][] 
+ []
+
+
+Overfull \hbox (1.43024pt too wide) in paragraph at lines 899--900
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][] 
+ []
+
+
+Overfull \hbox (49.12372pt too wide) in paragraph at lines 900--901
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][] 
+ []
+
+[22]
+Overfull \hbox (1.43024pt too wide) in paragraph at lines 911--912
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][] 
+ []
+
+
+Underfull \hbox (badness 1199) in paragraph at lines 914--922
+[]\T1/futs/m/n/12 Generally, the Scala term [][][][]$[]$[][][][][]$[]$[][][][][
+][][]$[]$[][][][][]$[]$[][][][][][][] de-fines a func-tion
+ []
+
+[23] [24] [25]
+Overfull \hbox (76.37714pt too wide) in paragraph at lines 1082--1083
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (1.43024pt too wide) in paragraph at lines 1083--1084
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (1.43024pt too wide) in paragraph at lines 1107--1108
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [26]
+Overfull \hbox (35.49701pt too wide) in paragraph at lines 1129--1130
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (35.49701pt too wide) in paragraph at lines 1153--1154
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (8.24359pt too wide) in paragraph at lines 1158--1159
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1162--1164
+[]\T1/futs/m/n/12 Write a func-tion for cube roots us-ing [][][] and
+ []
+
+[27]
+Overfull \hbox (9.42508pt too wide) in paragraph at lines 1203--1204
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[28]
+Overfull \hbox (42.31036pt too wide) in paragraph at lines 1262--1263
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (62.75043pt too wide) in paragraph at lines 1263--1264
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (90.00385pt too wide) in paragraph at lines 1280--1281
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (15.05695pt too wide) in paragraph at lines 1284--1285
+[][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[29]
+Underfull \hbox (badness 10000) in paragraph at lines 1308--1309
+[]\T1/futs/m/n/12 anonymous func-tions, such as [][][][][][][][][][][] or
+ []
+
+
+Overfull \hbox (76.37714pt too wide) in paragraph at lines 1315--1316
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[30]
+Chapter 6.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [31
+
+]
+[32] [33]
+Overfull \hbox (110.44391pt too wide) in paragraph at lines 1524--1525
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (103.63055pt too wide) in paragraph at lines 1529--1530
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (1.43024pt too wide) in paragraph at lines 1535--1536
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (35.49701pt too wide) in paragraph at lines 1536--1537
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[34]
+Overfull \hbox (21.8703pt too wide) in paragraph at lines 1580--1582
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[35]
+Overfull \hbox (55.93707pt too wide) in paragraph at lines 1624--1625
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Underfull \vbox (badness 2197) has occurred while \output is active []
+
+ [36]
+Overfull \hbox (8.24359pt too wide) in paragraph at lines 1691--1693
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (15.05695pt too wide) in paragraph at lines 1695--1697
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [37]
+Overfull \hbox (8.24359pt too wide) in paragraph at lines 1700--1701
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (1.43024pt too wide) in paragraph at lines 1702--1703
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (8.24359pt too wide) in paragraph at lines 1723--1725
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+
+ []
+
+
+Overfull \hbox (49.12372pt too wide) in paragraph at lines 1732--1733
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [38]
+[39]
+Overfull \hbox (28.68365pt too wide) in paragraph at lines 1824--1825
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][] 
+ []
+
+
+Overfull \hbox (90.00385pt too wide) in paragraph at lines 1833--1834
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][] 
+ []
+
+
+Overfull \hbox (35.49701pt too wide) in paragraph at lines 1834--1835
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (69.56378pt too wide) in paragraph at lines 1836--1837
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (62.75043pt too wide) in paragraph at lines 1837--1838
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[40] [41] [42
+
+]
+Chapter 7.
+
+Overfull \hbox (15.05695pt too wide) in paragraph at lines 1867--1868
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [43]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [44]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [45]
+[46] [47] [48] [49]
+Overfull \hbox (103.63055pt too wide) in paragraph at lines 2200--2201
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[50]
+Chapter 8.
+
+Overfull \hbox (8.24359pt too wide) in paragraph at lines 2242--2243
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (62.75043pt too wide) in paragraph at lines 2252--2253
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [51
+
+]
+Overfull \hbox (49.12372pt too wide) in paragraph at lines 2282--2283
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[52] [53]
+Overfull \hbox (137.69733pt too wide) in paragraph at lines 2406--2407
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][] 
+ []
+
+
+Overfull \hbox (28.68365pt too wide) in paragraph at lines 2412--2413
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][] 
+ []
+
+
+Overfull \hbox (1.43024pt too wide) in paragraph at lines 2418--2419
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (35.49701pt too wide) in paragraph at lines 2419--2420
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Underfull \hbox (badness 8075) in paragraph at lines 2423--2427
+\T1/futs/m/n/12 Note that we have left out the type ar-gu-ment in the ob-ject c
+re-ations
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [54]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [55]
+Overfull \hbox (15.05695pt too wide) in paragraph at lines 2529--2530
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][] 
+ []
+
+[56]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [57]
+Overfull \hbox (28.68365pt too wide) in paragraph at lines 2602--2603
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[58]
+Overfull \hbox (28.68365pt too wide) in paragraph at lines 2677--2678
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (55.93707pt too wide) in paragraph at lines 2687--2688
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [59]
+Overfull \hbox (28.68365pt too wide) in paragraph at lines 2706--2707
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+] 
+ []
+
+
+Overfull \hbox (28.68365pt too wide) in paragraph at lines 2717--2718
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [60]
+Overfull \hbox (1.43024pt too wide) in paragraph at lines 2758--2759
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+] 
+ []
+
+[61] [62]
+Chapter 9.
+
+Overfull \hbox (15.05695pt too wide) in paragraph at lines 2847--2848
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (28.68365pt too wide) in paragraph at lines 2863--2864
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (130.88397pt too wide) in paragraph at lines 2865--2866
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+
+ []
+
+[63
+
+]
+Underfull \hbox (badness 2922) in paragraph at lines 2885--2889
+\T1/futs/m/n/12 The `[][][]' op-er-a-tion as-so-ciates to the right: [][][][][]
+[][][][][][] is in-ter-preted as
+ []
+
+[64]
+Overfull \hbox (15.05695pt too wide) in paragraph at lines 2947--2948
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][] 
+ []
+
+[65] [66]
+Overfull \hbox (56.25288pt too wide) in paragraph at lines 3095--3096
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[67]
+Overfull \hbox (8.24359pt too wide) in paragraph at lines 3121--3122
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[68]
+Overfull \hbox (28.68365pt too wide) in paragraph at lines 3170--3171
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+
+ []
+
+
+Overfull \hbox (83.19049pt too wide) in paragraph at lines 3174--3175
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+
+ []
+
+
+Overfull \hbox (8.24359pt too wide) in paragraph at lines 3178--3179
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [69]
+Overfull \hbox (103.63055pt too wide) in paragraph at lines 3230--3231
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[70]
+Overfull \hbox (55.93707pt too wide) in paragraph at lines 3296--3297
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+
+ []
+
+
+Overfull \hbox (42.31036pt too wide) in paragraph at lines 3303--3304
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][] 
+ []
+
+[71]
+Underfull \vbox (badness 1122) has occurred while \output is active []
+
+ [72]
+Overfull \hbox (28.2482pt too wide) in paragraph at lines 3375--3376
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][] 
+ []
+
+
+Overfull \hbox (69.56378pt too wide) in paragraph at lines 3380--3381
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][] 
+ []
+
+
+Overfull \hbox (69.56378pt too wide) in paragraph at lines 3381--3382
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][] 
+ []
+
+
+Overfull \hbox (57.42297pt too wide) in paragraph at lines 3400--3401
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][] 
+ []
+
+
+Overfull \hbox (35.49701pt too wide) in paragraph at lines 3405--3406
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][] 
+ []
+
+
+Overfull \hbox (35.49701pt too wide) in paragraph at lines 3406--3407
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][] 
+ []
+
+
+Overfull \hbox (60.21724pt too wide) in paragraph at lines 3415--3416
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][] 
+ []
+
+
+Overfull \hbox (57.42297pt too wide) in paragraph at lines 3416--3417
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][] 
+ []
+
+[73]
+Overfull \hbox (1.43024pt too wide) in paragraph at lines 3425--3426
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+] 
+ []
+
+[74]
+Overfull \hbox (8.24359pt too wide) in paragraph at lines 3492--3493
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+
+ []
+
+
+Overfull \hbox (103.63055pt too wide) in paragraph at lines 3501--3502
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][] 
+ []
+
+[75]
+Underfull \vbox (badness 1789) has occurred while \output is active []
+
+ [76]
+[77] [78
+
+]
+Chapter 10.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [79]
+[80]
+Overfull \hbox (62.75043pt too wide) in paragraph at lines 4096--4097
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+
+ []
+
+
+Overfull \hbox (21.8703pt too wide) in paragraph at lines 4103--4104
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (1.43024pt too wide) in paragraph at lines 4122--4123
+[][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (117.25726pt too wide) in paragraph at lines 4131--4132
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[81]
+Overfull \hbox (76.37714pt too wide) in paragraph at lines 4159--4160
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (83.19049pt too wide) in paragraph at lines 4164--4165
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[82]
+Overfull \hbox (8.24359pt too wide) in paragraph at lines 4231--4232
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+] 
+ []
+
+[83]
+Overfull \hbox (69.56378pt too wide) in paragraph at lines 4254--4255
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (49.12372pt too wide) in paragraph at lines 4255--4256
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[84]
+Underfull \hbox (badness 1178) in paragraph at lines 4307--4311
+[]\T1/futs/m/n/12 One caveat: It is not as-sured au-to-mat-i-cally that the re-
+sult trans-lat-ing a for-
+ []
+
+[85] [86
+
+]
+Chapter 11.
+[87] [88] [89] [90]
+Underfull \vbox (badness 1308) has occurred while \output is active []
+
+ [91]
+
+LaTeX Warning: Citation `abelson-sussman:structure' on page 92 undefined on inp
+ut line 4618.
+
+[92]
+Overfull \hbox (69.56378pt too wide) in paragraph at lines 4675--4676
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+] 
+ []
+
+
+Underfull \vbox (badness 1348) has occurred while \output is active []
+
+ [93]
+Underfull \hbox (badness 1789) in paragraph at lines 4713--4720
+[][][] \T1/futs/m/n/12 sched-ules an ac-tion to be per-formed at a spec-i-fied 
+de-lay af-ter
+ []
+
+[94]
+Overfull \hbox (8.24359pt too wide) in paragraph at lines 4764--4765
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (42.31036pt too wide) in paragraph at lines 4780--4781
+[][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[95]
+Overfull \hbox (90.00385pt too wide) in paragraph at lines 4850--4851
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[96] [97] [98
+
+]
+Chapter 12.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [99]
+Underfull \hbox (badness 10000) in paragraph at lines 4929--4931
+\T1/futs/m/n/12 Note that the vari-able [][][] ``steps through'' all val-ues of
+ the in-ter-val
+ []
+
+[100]
+Overfull \hbox (28.68365pt too wide) in paragraph at lines 4987--4988
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[101] [102
+
+]
+Chapter 13.
+[103]
+Overfull \hbox (90.00385pt too wide) in paragraph at lines 5053--5054
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (110.44391pt too wide) in paragraph at lines 5055--5056
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (76.37714pt too wide) in paragraph at lines 5080--5081
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (130.88397pt too wide) in paragraph at lines 5084--5085
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+
+ []
+
+
+Overfull \hbox (110.44391pt too wide) in paragraph at lines 5088--5089
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+
+ []
+
+
+Underfull \vbox (badness 1320) has occurred while \output is active []
+
+ [104]
+Overfull \hbox (55.93707pt too wide) in paragraph at lines 5108--5109
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [105]
+[106] [107] [108
+
+]
+Chapter 14.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [109]
+Overfull \hbox (69.56378pt too wide) in paragraph at lines 5303--5304
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (69.56378pt too wide) in paragraph at lines 5304--5306
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (21.8703pt too wide) in paragraph at lines 5321--5322
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [110]
+[111] [112
+
+]
+Chapter 15.
+
+Underfull \hbox (badness 1874) in paragraph at lines 5355--5355
+|\T1/phv/b/n/24.88 Implicit Pa-ram-e-ters and Con-ver-
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [113]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [114]
+Overfull \hbox (55.93707pt too wide) in paragraph at lines 5484--5485
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[115]
+Overfull \hbox (61.67307pt too wide) in paragraph at lines 5511--5512
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (31.65958pt too wide) in paragraph at lines 5519--5520
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (1.43024pt too wide) in paragraph at lines 5522--5523
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (21.8703pt too wide) in paragraph at lines 5532--5533
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+
+ []
+
+[116]
+Chapter 16.
+
+LaTeX Warning: Citation `milner:polymorphism' on page 117 undefined on input li
+ne 6003.
+
+
+Overfull \hbox (15.05695pt too wide) in paragraph at lines 6019--6020
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [117
+
+]
+Overfull \hbox (8.24359pt too wide) in paragraph at lines 6040--6041
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (110.44391pt too wide) in paragraph at lines 6076--6077
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (103.63055pt too wide) in paragraph at lines 6082--6083
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][] 
+ []
+
+
+Overfull \hbox (28.68365pt too wide) in paragraph at lines 6085--6086
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6087--6099
+\T1/futs/m/n/12 We rep-re-sent sub-sti-tu-tions as func-tions, of type [][][][]
+[][][]. This
+ []
+
+
+Underfull \hbox (badness 4752) in paragraph at lines 6087--6099
+\T1/futs/m/n/12 is achieved by mak-ing class [][][] in-herit from the unary fun
+c-tion type
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [118]
+Overfull \hbox (96.8172pt too wide) in paragraph at lines 6111--6112
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (90.00385pt too wide) in paragraph at lines 6122--6123
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+
+ []
+
+
+Overfull \hbox (1.43024pt too wide) in paragraph at lines 6147--6148
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (15.05695pt too wide) in paragraph at lines 6149--6150
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][] 
+ []
+
+[119]
+Overfull \hbox (15.05695pt too wide) in paragraph at lines 6169--6170
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (42.31036pt too wide) in paragraph at lines 6186--6187
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (55.93707pt too wide) in paragraph at lines 6196--6197
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [120]
+Overfull \hbox (55.93707pt too wide) in paragraph at lines 6208--6209
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][] 
+ []
+
+
+LaTeX Warning: Citation `milner:polymorphism' on page 121 undefined on input li
+ne 6226.
+
+
+Overfull \hbox (15.05695pt too wide) in paragraph at lines 6234--6235
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [121]
+Overfull \hbox (110.44391pt too wide) in paragraph at lines 6287--6288
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (1.43024pt too wide) in paragraph at lines 6292--6293
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (15.05695pt too wide) in paragraph at lines 6296--6297
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [122]
+Overfull \hbox (110.44391pt too wide) in paragraph at lines 6321--6322
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[123] [124
+
+]
+Chapter 17.
+
+Underfull \vbox (badness 3271) has occurred while \output is active []
+
+ [125]
+Overfull \hbox (15.05695pt too wide) in paragraph at lines 6560--6561
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (15.05695pt too wide) in paragraph at lines 6561--6562
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [126]
+[127] [128] [129]
+Overfull \hbox (69.56378pt too wide) in paragraph at lines 6755--6756
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (1.43024pt too wide) in paragraph at lines 6771--6772
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[130]
+Overfull \hbox (21.8703pt too wide) in paragraph at lines 6817--6818
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[131] [132] [133]
+Overfull \hbox (42.31036pt too wide) in paragraph at lines 6964--6965
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (35.49701pt too wide) in paragraph at lines 6986--6987
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (110.44391pt too wide) in paragraph at lines 6987--6988
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (1.43024pt too wide) in paragraph at lines 6988--6989
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [134]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [135]
+Overfull \hbox (69.56378pt too wide) in paragraph at lines 7078--7079
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [136])
+No file ScalaByExample.bbl.
+[137] (./ScalaByExample.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were undefined references.
+
+ )
+(\end occurred inside a group at level 1)
+
+### simple group (level 1) entered at line 4224 ({)
+### bottom level 
+Here is how much of TeX's memory you used:
+ 11541 strings out of 494999
+ 165842 string characters out of 1180816
+ 248869 words of memory out of 3000000
+ 11821 multiletter control sequences out of 15000+50000
+ 127717 words of font info for 121 fonts, out of 3000000 for 9000
+ 54 hyphenation exceptions out of 8191
+ 45i,15n,51p,315b,1791s stack positions out of 5000i,500n,10000p,200000b,50000s
+ </home/erunamo/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000
+.600pk>{/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc} </home/erunamo/.t
+exmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk></usr/share/texmf-texlive/f
+onts/type1/public/fourier/fourier-mex.pfb></usr/share/texmf-texlive/fonts/type1
+/public/fourier/fourier-mlit.pfb></usr/share/texmf-texlive/fonts/type1/public/f
+ourier/fourier-ms.pfb></usr/share/texmf-texlive/fonts/type1/adobe/utopia/putb8a
+.pfb></usr/share/texmf-texlive/fonts/type1/adobe/utopia/putr8a.pfb></usr/share/
+texmf-texlive/fonts/type1/adobe/utopia/putr8a.pfb></usr/share/texmf-texlive/fon
+ts/type1/adobe/utopia/putri8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/hel
+vetic/uhvb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/helvetic/uhvr8a.pfb>
+
+Output written on ScalaByExample.pdf (143 pages, 901042 bytes).
+PDF statistics:
+ 4132 PDF objects out of 4296 (max. 8388607)
+ 2698 named destinations out of 2984 (max. 500000)
+ 513 words of extra memory for PDF output out of 10000 (max. 10000000)
+

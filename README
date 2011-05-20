@@ -1,0 +1,4 @@
+EN ESTE REPOSITORIO MANTENDRÉ LA TRADUCCION DE ALGUNOS DE LOS DOCUEMNTOS DE SCALA TEMPORALMENTE!!
+
+Si tienen un linux basado en Debian, para editar más comodamente en latex, instalen:
+$ sudo aptitude install texmaker texlive-lang-spanish xfonts-scalable texlive-fonts-extra
