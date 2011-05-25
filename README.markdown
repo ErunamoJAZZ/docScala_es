@@ -24,3 +24,12 @@ Por el momento, solo está **Scala by Example**.
 
 Si tienes pensado colaborar, no dudes en contactarme para incluír los aportes que hagas :)
 
+
+Lista de Correo
+===============
+
+Las traducciones se estarán coordinando desde la lista de correo de ScalaMUG (Comunidad mexicana... yo soy colombiano, pero es la unica comunidad Hispana registrada).
+
+[Link del hilo de discución](https://groups.google.com/forum/#!topic/scalamug/PmqaGLz2OUM)
+
+[Link de la Lista de Correo](https://groups.google.com/forum/#!forum/scalamug)
