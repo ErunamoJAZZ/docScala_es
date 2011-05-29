@@ -36,40 +36,41 @@ def sort(xs: Array[Int]) {
 }
 \end{lstlisting}
 
-La implementación luce muy similar a lo que se escribiría en Java o C.
-Usamos los mismos operadores y estructuras de control similares. Hay
+La implementación luce muy similar a como se escribiría en Java o C.
+Usamos los mismos operadores, y estructuras de control similares. Hay
 también otras diferencias sintácticas menores. En particular:
 \begin{itemize}
 \item
-Las definiciones comienzan con una palabra reservada. Las definiciones
-de función comienzan con \code{def}, las definiciones de variable
-comienzan con \code{var} y las definiciones de valores (p. ej.,
-variables de solo lectura) comienzan con \code{val}.
+Las definiciones comienzan con una palabra reservada. Con \code{def} 
+comienzan las definiciones de las funciones, con \code{var} comienzan 
+las definiciones de variables y con \code{val} comienzan las definiciones 
+de valores (es decir, variables de solo lectura).
 \item
-El tipo declarado de un símbolo se da después del símbolo y dos puntos
-(:). El tipo declarado a menudo puede omitirse, porque el compilador
-puede inferirse del contexto.
+El tipo de dato de un símbolo, se declara después del símbolo y dos puntos
+(:). La declaración del tipo de dato a menudo puede omitirse, ya que el 
+compilador puede inferirlo del contexto.
 \item
 Los tipos de arreglo se escriben \code{Array[T]} en lugar de \code{T[]}, 
-y las selecciones de arreglo se escriben \code{a(i)} en lugar de
+y las selecciones del arreglo se escriben \code{a(i)} en lugar de
 \code{a[i]}.
 \item
 Las funciones pueden anidarse dentro de otras funciones. Las funciones
-anidadas pueden tener acceso a parámetros y variables locales de
-funciones incluyentes. Por ejemplo, el nombre del arreglo  \code{xs} es
-visible en functiones \code{swap} y \code{sort1}, y por lo tanto no
-se les requiere pasar como un argumento.
+anidadas pueden tener acceso a parámetros y variables locales de las
+funciones donde estan incluídas. Por ejemplo, el nombre del arreglo 
+\code{xs} es visible tanto en la función \code{swap}, como en la función
+\code{sort1}, y por lo tanto no se les requiere pasar como un argumento.
 \end{itemize}
+
 Hasta ahora, Scala luce como un lenguaje convencional con algunas
-peculiaridades sintácticas. De hecho es posible escribir programas de
+peculiaridades sintácticas. De hecho es posible escribir programas de una
 manera imperativa convencional o en estilo orientado a objetos. Esto es
 importante porque es una de las cosas que hace fácil combinar
-componentes de Scala con componentes escritos en lenguajes dominantes
+componentes de Scala con componentes escritos en otros lenguajes dominantes
 como Java, C\# o Visual Basic.
 
 Sin embargo, también es posible escribir programas en un estilo que
 luzca completamente diferente. He aquí un {\em Quicksort} de nuevo,
-esta vez escrito en estilo funcional.
+pero escrito esta vez en estilo funcional.
 
 \begin{lstlisting}
 def sort(xs: Array[Int]): Array[Int] = {
@@ -88,15 +89,15 @@ El programa funcional captura la esencia del algoritmo {\em Quicksort}
 de una manera concisa:
 \begin{itemize}
 \item Si el arreglo está vacío o consiste de un solo elemento, 
-      ya está ordenado, así que se regresa inmediatamente.
-\item Si el arreglo no está vacío, se selecciona un elemento a la mitad
-      como si fuera un pivote.
+      entonces ya está ordenado, así que se regresa inmediatamente.
+\item Si el arreglo no está vacío ni es único, se selecciona un 
+      elemento a la mitad del arreglo como si fuera un pivote.
 \item Se parte el arreglo en dos subarreglos conteniendo elementos que,
 respectivamente, sean menores y mayores que el elemento pivote, y un
 tercer arreglo que contiene los elementos igual al pivote.
 \item Se ordenan los primeros dos subarreglos por invocación recursiva
 de la función de ordenación.\footnote{Esto no es exactamente lo que hace
-el algoritmo imperativo; el posterior parte el arreglo en dos
+el algoritmo imperativo; el llamado posterior, parte el arreglo en dos
 subarreglos conteniendo elementos menores o mayores o iguales al
 pivote.}
 \item El resultado se obtiene al acomodar los tres subarreglos juntos.
@@ -104,15 +105,16 @@ pivote.}
 Tanto la implementación imperativa como la funcional tienen la misma
 complejidad asintótica -- $O(N;log(N))$ en el caso promedio y
 $O(N^2)$ en el peor caso. Pero donde la implementación imperativa opera
-en lugar de modificar el arreglo argumento, la implementación funcional
-regresa un nuevo arreglo acomodado y deja el arreglo argumento sin
-cambios. La implementación funcional requiere más memoria transitiva que
+sobre el arreglo que le llega como argumento modificandolo, la 
+implementación funcional regresa un nuevo arreglo acomodado y deja 
+el arreglo que le llega como argumento sin ningun cambio. 
+La implementación funcional requiere más memoria transitiva que
 la imperativa.
 
-La implementación imperativa hace parecer a Scala como si escala fuera
-un lenguaje que se especialice en operaciones funcionales sobre
+La implementación imperativa hace parecer a Scala como si fuera
+un lenguaje que se especializa en operaciones funcionales sobre
 arreglos. De hecho, no es así; todas las operaciones utilizadas en el
-ejemplo son simples métodos de biblioteca simples de una
+ejemplo son simples métodos de biblioteca de una
 {\em sequence} class \code{Seq[T]} los cuales son parte de la biblioteca
 estándar de Scala, ella misma implementada en Scala. Debido a que los
 arreglos son instancias de \verb@Seq@ todos los métodos de sequencia
@@ -122,16 +124,16 @@ En particular, hay un método \code{filter} que toma como argumento una
 {\em función de predicado}. Esta función de predicado debe mapear
 elementos de arreglo a valores {\em boolean}. El resultado de
 \code{filter} es un arreglo consistente en todos los elementos de
-arreglo original para el cual la función de predicado dada es
+arreglo original para el cual la función de predicado es
 {\em true}. El método \code{filter} de un objeto de tipo
-\code{Array[T]} así tiene la firma
+\code{Array[T]} tiene esta estructura
 
 \begin{lstlisting}
 def filter(p: T => Boolean): Array[T]
 \end{lstlisting}
 
 Aquí, \code{T => Boolean} es del tipo de funciones que toma un elemento
-de tipo \code{t} y regresa un \code{Boolean}. Las funciones como
+de tipo \code{T} y regresa un \code{Boolean}. Las funciones como
 \code{filter} que toman otra función como argumento para regresar uno
 como resultado se llaman funciones {\em de orden mayor}
 ({\em higher-order functions} en inglés).
@@ -153,10 +155,10 @@ representa una función que toma un argumento $x$ y regresa el valor
 ~\lstinline@pivot > $x$@. Este es un ejemplo de una {\em función
 parcialmente aplicada}. ({\em Partially applied function}, en inglés). 
 Otra manera equivalente de escribir esta función
-la cual hace que el argumento faltante explícito es
+la cual hace al argumento faltante explícito es
 ~\lstinline@x => pivot > x@.
-La función es anónima, p. ej.\ no se define con un nombre. El tipo de
-parámetro \code{x} se omite porque un compilador de Scala puede
+La función es anónima, es decir, no se define con un nombre. El tipo de
+parámetro \code{x} se omite porque el compilador de Scala puede
 inferirlo automáticamente del contexto donde la función se use. Para
 resumir, \code{xs.filter(pivot >)} regresa una lista consitente en todos
 los elementos de la lista \code{xs} que sean más pequeños que
@@ -173,12 +175,12 @@ Por ejemplo, los operadores binarios ``estándar'' tales como \code{+},
 la expresión \code{i + 1} se mira como la invocación \code{i.+(1)} del
 método \code{+} del valor entero \code{x}.
 
-Por supuesto, un compilador es libre (si es moderadamente inteligente
-incluso se espera) de reconocer el caso especial de llamar el método
-\code{+} sobre argumentos enteros y generar código en línea eficiente
-para ello.
+Por supuesto, un compilador es libre (y si es moderadamente inteligente,
+incluso se espera) de reconocer el caso especial al llamar al método
+\code{+} sobre argumentos enteros y generar código eficiente
+para ello en una línea.
 
-Para un diagnóstico de errores más eficiente y mejor, el {\em loop}
+Para un diagnóstico de errores más eficiente y mejor, el ciclo 
 \code{while} es un constructo primitivo en Scala. Pero en principio, 
 podría haber sido igual de bien una función predefinida. Aquí hay una
 posible implementación de él:
@@ -190,7 +192,7 @@ def While (p: => Boolean) (s: => Unit) {
 La función \code{While} toma como su primer parámetro una función de
 prueba, lo cual no toma parámetros y produce un valor {\em boolean}.
 Como segundo parámetro toma una función de comando la cual tampoco toma
-parámetros y produce un resultado del tipo \lstinline@Unit@.
+parámetros y produce un resultado del tipo \lstinline@Unit@. 
 \code{While} invoca la función de comando mientras la función de prueba
 produce {\em true}.
 
@@ -211,11 +213,11 @@ def swap(i: Int, j: Int) {
   ()
 }
 \end{lstlisting}
-El valor de resultado de esta función es simplemente su última expresión
+El valor que retorna esta función es simplemente su última expresión
 -- una palabra clave
 \lstinline@return@ no es necesaria. Nótese que las funciones que
-regresan un valor explícito necesitan un ``='' antes de su cueerpo o
-expresión de definición.
+regresan un valor explícito necesitan un ``='' antes de definir su cuerpo
+o de definir sus expresiones.
 
 \chapter{Programming with Actors and Messages}
 \label{chap:example-auction}
