@@ -7,9 +7,10 @@
  
 \newcommand{\rewriteby}[1]{\mbox{\tab\tab\rm(#1)}}
 
-\chapter{\label{chap:example-one}A First Example}
+\chapter{\label{chap:example-one}Un primer ejemplo}
 
-As a first example, here is an implementation of Quicksort in Scala.
+Como primer ejemplo, aquí está una implementación de un {\em Quicksort}
+en Scala.
 
 \begin{lstlisting}
 def sort(xs: Array[Int]) {
@@ -35,38 +36,40 @@ def sort(xs: Array[Int]) {
 }
 \end{lstlisting}
 
-The implementation looks quite similar to what one would write in Java
-or C.  We use the same operators and similar control structures.
-There are also some minor syntactical differences. In particular:
+La implementación luce muy similar a lo que se escribiría en Java o C.
+Usamos los mismos operadores y estructuras de control similares. Hay
+también otras diferencias sintácticas menores. En particular:
 \begin{itemize}
 \item
-Definitions start with a reserved word. Function definitions start
-with \code{def}, variable definitions start with \code{var} and
-definitions of values (i.e. read only variables) start with \code{val}.
+Las definiciones comienzan con una palabra reservada. Las definiciones
+de función comienzan con \code{def}, las definiciones de variable
+comienzan con \code{var} y las definiciones de valores (p. ej.,
+variables de solo lectura) comienzan con \code{val}.
 \item
-The declared type of a symbol is given after the symbol and a colon.
-The declared type can often be omitted, because the compiler can infer
-it from the context.
+El tipo declarado de un símbolo se da después del símbolo y dos puntos
+(:). El tipo declarado a menudo puede omitirse, porque el compilador
+puede inferirse del contexto.
 \item
-Array types are written \code{Array[T]} rather than \code{T[]}, 
-and array selections are written \code{a(i)} rather than \code{a[i]}.
+Los tipos de arreglo se escriben \code{Array[T]} en lugar de \code{T[]}, 
+y las selecciones de arreglo se escriben \code{a(i)} en lugar de
+\code{a[i]}.
 \item
-Functions can be nested inside other functions. Nested functions can
-access parameters and local variables of enclosing functions. For
-instance, the name of the array \code{xs} is visible in functions
-\code{swap} and \code{sort1}, and therefore need not be passed as a
-parameter to them.
+Las funciones pueden anidarse dentro de otras funciones. Las funciones
+anidadas pueden tener acceso a parámetros y variables locales de
+funciones incluyentes. Por ejemplo, el nombre del arreglo  \code{xs} es
+visible en functiones \code{swap} y \code{sort1}, y por lo tanto no
+se les requiere pasar como un argumento.
 \end{itemize}
-So far, Scala looks like a fairly conventional language with some
-syntactic peculiarities. In fact it is possible to write programs in a
-conventional imperative or object-oriented style. This is important
-because it is one of the things that makes it easy to combine Scala
-components with components written in mainstream languages such as
-Java, C\# or Visual Basic.
+Hasta ahora, Scala luce como un lenguaje convencional con algunas
+peculiaridades sintácticas. De hecho es posible escribir programas de
+manera imperativa convencional o en estilo orientado a objetos. Esto es
+importante porque es una de las cosas que hace fácil combinar
+componentes de Scala con componentes escritos en lenguajes dominantes
+como Java, C\# o Visual Basic.
 
-However, it is also possible to write programs in a style which looks
-completely different. Here is Quicksort again, this time written in
-functional style.
+Sin embargo, también es posible escribir programas en un estilo que
+luzca completamente diferente. He aquí un {\em Quicksort} de nuevo,
+esta vez escrito en estilo funcional.
 
 \begin{lstlisting}
 def sort(xs: Array[Int]): Array[Int] = {
@@ -81,124 +84,138 @@ def sort(xs: Array[Int]): Array[Int] = {
 }
 \end{lstlisting}
 
-The functional program captures the essence of the quicksort algorithm
-in a concise way:
+El programa funcional captura la esencia del algoritmo {\em Quicksort}
+de una manera concisa:
 \begin{itemize}
-\item If the array is empty or consists of a single element, 
-      it is already sorted, so return it immediately.
-\item If the array is not empty, pick an an element in the middle of
-      it as a pivot.
-\item Partition the array into two sub-arrays containing elements that
-are less than, respectively greater than the pivot element, and a
-third array which contains elements equal to pivot.
-\item Sort the first two sub-arrays by a recursive invocation of
-the sort function.\footnote{This is not quite what the imperative algorithm does;
-the latter partitions the array into two sub-arrays containing elements
-less than or greater or equal to pivot.}
-\item The result is obtained by appending the three sub-arrays together.
+\item Si el arreglo está vacío o consiste de un solo elemento, 
+      ya está ordenado, así que se regresa inmediatamente.
+\item Si el arreglo no está vacío, se selecciona un elemento a la mitad
+      como si fuera un pivote.
+\item Se parte el arreglo en dos subarreglos conteniendo elementos que,
+respectivamente, sean menores y mayores que el elemento pivote, y un
+tercer arreglo que contiene los elementos igual al pivote.
+\item Se ordenan los primeros dos subarreglos por invocación recursiva
+de la función de ordenación.\footnote{Esto no es exactamente lo que hace
+el algoritmo imperativo; el posterior parte el arreglo en dos
+subarreglos conteniendo elementos menores o mayores o iguales al
+pivote.}
+\item El resultado se obtiene al acomodar los tres subarreglos juntos.
 \end{itemize}
-Both the imperative and the functional implementation have the same
-asymptotic complexity -- $O(N;log(N))$ in the average case and
-$O(N^2)$ in the worst case. But where the imperative implementation
-operates in place by modifying the argument array, the functional
-implementation returns a new sorted array and leaves the argument
-array unchanged. The functional implementation thus requires more
-transient memory than the imperative one.
+Tanto la implementación imperativa como la funcional tienen la misma
+complejidad asintótica -- $O(N;log(N))$ en el caso promedio y
+$O(N^2)$ en el peor caso. Pero donde la implementación imperativa opera
+en lugar de modificar el arreglo argumento, la implementación funcional
+regresa un nuevo arreglo acomodado y deja el arreglo argumento sin
+cambios. La implementación funcional requiere más memoria transitiva que
+la imperativa.
 
-The functional implementation makes it look like Scala is a language
-that's specialized for functional operations on arrays. In fact, it is
-not; all of the operations used in the example are simple library
-methods of a {\em sequence} class \code{Seq[T]} which is part of the
-standard Scala library, and which itself is implemented in
-Scala. Because arrays are instances of \verb@Seq@ all sequence
-methods are available for them.
+La implementación imperativa hace parecer a Scala como si escala fuera
+un lenguaje que se especialice en operaciones funcionales sobre
+arreglos. De hecho, no es así; todas las operaciones utilizadas en el
+ejemplo son simples métodos de biblioteca simples de una
+{\em sequence} class \code{Seq[T]} los cuales son parte de la biblioteca
+estándar de Scala, ella misma implementada en Scala. Debido a que los
+arreglos son instancias de \verb@Seq@ todos los métodos de sequencia
+están disponibles para ellos.
 
-In particular, there is the method \code{filter} which takes as
-argument a {\em predicate function}. This predicate function must map
-array elements to boolean values. The result of \code{filter} is an
-array consisting of all the elements of the original array for which the
-given predicate function is true. The \code{filter} method of an object
-of type \code{Array[T]} thus has the signature
+En particular, hay un método \code{filter} que toma como argumento una
+{\em función de predicado}. Esta función de predicado debe mapear
+elementos de arreglo a valores {\em boolean}. El resultado de
+\code{filter} es un arreglo consistente en todos los elementos de
+arreglo original para el cual la función de predicado dada es
+{\em true}. El método \code{filter} de un objeto de tipo
+\code{Array[T]} así tiene la firma
 
 \begin{lstlisting}
 def filter(p: T => Boolean): Array[T]
 \end{lstlisting}
 
-Here, \code{T => Boolean} is the type of functions that take an element
-of type \code{t} and return a \code{Boolean}.  Functions like
-\code{filter} that take another function as argument or return one as
-result are called {\em higher-order} functions.
+Aquí, \code{T => Boolean} es del tipo de funciones que toma un elemento
+de tipo \code{t} y regresa un \code{Boolean}. Las funciones como
+\code{filter} que toman otra función como argumento para regresar uno
+como resultado se llaman funciones {\em de orden mayor}
+({\em higher-order functions} en inglés).
 
-Scala does not distinguish between identifiers and operator names. An
-identifier can be either a sequence of letters and digits which begins
-with a letter, or it can be a sequence of special characters, such as
-``\code{+}'', ``\code{*}'', or ``\code{:}''.  Any identifier can
-be used as an infix operator in Scala.  The binary operation $E;op;E'$
-is always interpreted as the method call $E.op(E')$. This holds also
-for binary infix operators which start with a letter. Hence, the
-expression ~\lstinline@xs filter (pivot >)@~ is equivalent to the
-method call ~\lstinline@xs.filter(pivot >)@.
+Scala no distingue entre identificadores y nombres de operador. Un
+identificador puede ser tanto una secuencia de letras y dígitos que
+comiencen con una letra, o pueden ser una secuencia de carácteres
+especiales, tales como ``\code{+}'', ``\code{*}'', o ``\code{:}''. 
+Cualquier identificador puede suarse como un operador infijo.
+La operación binaria $E;op;E'$ se interpreta siempre como una llamada
+del método $E.op(E')$. Esto también aplica para operadores infijos
+binarios los cuales comiencen con una letra. Por lo tanto, la expresión
+~\lstinline@xs filter (pivot >)@~ es equivalente a la llamada de método
+~\lstinline@xs.filter(pivot >)@.
 
-In the quicksort program, \code{filter} is applied three times to an
-anonymous function argument.  The first argument, \code{pivot >},
-represents a function that takes an argument $x$ and returns the value
-~\lstinline@pivot > $x$@. This is an example of a {\em partially applied
-function}.  Another, equivalent way to write this function which makes
-the missing argument explicit is ~\lstinline@x => pivot > x@.
-The function is anonymous, i.e.\ it is not defined with a name. The
-type of the \code{x} parameter is omitted because a Scala compiler can
-infer it automatically from the context where the function is used. To
-summarize, \code{xs.filter(pivot >)} returns a list consisting
-of all elements of the list \code{xs} that are smaller than
+En el programa {\em Quicksort}, \code{filter} se aplica tres veces a un
+argumento de función anónima. El primer argumento, \code{pivot >},
+representa una función que toma un argumento $x$ y regresa el valor
+~\lstinline@pivot > $x$@. Este es un ejemplo de una {\em función
+parcialmente aplicada}. ({\em Partially applied function}, en inglés). 
+Otra manera equivalente de escribir esta función
+la cual hace que el argumento faltante explícito es
+~\lstinline@x => pivot > x@.
+La función es anónima, p. ej.\ no se define con un nombre. El tipo de
+parámetro \code{x} se omite porque un compilador de Scala puede
+inferirlo automáticamente del contexto donde la función se use. Para
+resumir, \code{xs.filter(pivot >)} regresa una lista consitente en todos
+los elementos de la lista \code{xs} que sean más pequeños que
 \code{pivot}.
 
-Looking again in detail at the first, imperative implementation of
-Quicksort, we find that many of the language constructs used in the
-second solution are also present, albeit in a disguised form.
+Al mirar de nuevo en detalle a la primera implementación imperativa de
+{\em Quicksort}, encontramos que muchos de los constructos de lenguaje
+utilizados en la segunda solución están también presentes, no obstante,
+en una forma disfrazada.
 
-For instance, ``standard'' binary operators such as \code{+},
-\code{-}, or \code{<} are not treated in any special way. Like
-\code{append}, they are methods of their left operand. Consequently,
-the expression \code{i + 1} is regarded as the invocation
-\code{i.+(1)} of the \code{+} method of the integer value \code{x}.
-Of course, a compiler is free (if it is moderately smart, even expected)
-to recognize the special case of calling the \code{+} method over
-integer arguments and to generate efficient inline code for it.
+Por ejemplo, los operadores binarios ``estándar'' tales como \code{+},
+\code{-}, o \code{<} no se tratan de ninguna manera especial. Como
+\code{append}, son métodos de sus operando izquierdo. Consecuentemente,
+la expresión \code{i + 1} se mira como la invocación \code{i.+(1)} del
+método \code{+} del valor entero \code{x}.
 
-For efficiency and better error diagnostics the \code{while} loop is a
-primitive construct in Scala. But in principle, it could have just as
-well been a predefined function. Here is a possible implementation of it:
+Por supuesto, un compilador es libre (si es moderadamente inteligente
+incluso se espera) de reconocer el caso especial de llamar el método
+\code{+} sobre argumentos enteros y generar código en línea eficiente
+para ello.
+
+Para un diagnóstico de errores más eficiente y mejor, el {\em loop}
+\code{while} es un constructo primitivo en Scala. Pero en principio, 
+podría haber sido igual de bien una función predefinida. Aquí hay una
+posible implementación de él:
 \begin{lstlisting}
 def While (p: => Boolean) (s: => Unit) {
   if (p) { s ; While(p)(s) }
 }
 \end{lstlisting}
-The \code{While} function takes as first parameter a test function,
-which takes no parameters and yields a boolean value. As second
-parameter it takes a command function which also takes no parameters
-and yields a result of type \lstinline@Unit@. \code{While} invokes the
-command function as long as the test function yields true.
+La función \code{While} toma como su primer parámetro una función de
+prueba, lo cual no toma parámetros y produce un valor {\em boolean}.
+Como segundo parámetro toma una función de comando la cual tampoco toma
+parámetros y produce un resultado del tipo \lstinline@Unit@.
+\code{While} invoca la función de comando mientras la función de prueba
+produce {\em true}.
 
-Scala's \lstinline@Unit@ type roughly corresponds to \lstinline@void@
-in Java; it is used whenever a function does not return an interesting
-result. In fact, because Scala is an expression-oriented language,
-every function returns some result. If no explicit return expression
-is given, the value \lstinline@()@, which is pronounced ``unit'', is
-assumed.  This value is of type \lstinline@Unit@.
-Unit-returning functions are also called {\em procedures}.  
-Here's a more
-``expression-oriented'' formulation of the \lstinline@swap@ function
-in the first implementation of quicksort, which makes this explicit:
+El tipado \lstinline@Unit@ de Scala corresponde a grandes rasgos al
+\lstinline@void@ en Java< se usa simpre que una función no regrese un
+resultado interesante. De hecho, porque Scala es un lenguaje orientado
+a expresiones, cada función regresa algún resultado. Si no se da una
+expresión de regreso explícita, se asume el valor \lstinline@()@, que se
+pronuncia ``unit''. Este valor es del tipo \lstinline@Unit@.
+Las funciones que regresen {\em Unit} también se llaman
+{\em procedimientos}.  
+Aquí está una formúlación más ``orientada a expresiones'' de la función
+\lstinline@swap@ en la primera implementación del {\em Quicksort}, lo
+cual hace esto explícita:
 \begin{lstlisting}
 def swap(i: Int, j: Int) {
   val t = xs(i); xs(i) = xs(j); xs(j) = t
   ()
 }
 \end{lstlisting}
-The result value of this function is simply its last expression -- a
-\lstinline@return@ keyword is not necessary. Note that functions
-returning an explicit value always need an ``='' before their
-body or defining expression.  
+El valor de resultado de esta función es simplemente su última expresión
+-- una palabra clave
+\lstinline@return@ no es necesaria. Nótese que las funciones que
+regresan un valor explícito necesitan un ``='' antes de su cueerpo o
+expresión de definición.
 
 \chapter{Programming with Actors and Messages}
 \label{chap:example-auction}
@@ -1200,7 +1217,7 @@ digits \code{`0'} to `\code{9}',
 the delimiter characters
 
 \begin{lstlisting}
-.    ,    ;    (    )    {    }    [    ]    \    $\mbox{\tt "}$    '
+.    ,    ;    (    )    {    }    [    ]    \    "    '    
 \end{lstlisting}
 
 \item

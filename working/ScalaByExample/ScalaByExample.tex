@@ -1,6 +1,8 @@
 
 \documentclass[a4paper,12pt,twoside,titlepage]{book}
 
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
 \usepackage{scaladoc}
 \usepackage{fleqn}
 \usepackage{modefs}
@@ -33,48 +35,52 @@
 \mainmatter
 \sloppy
 
-\chapter{\label{chap:intro}Introduction}
+\chapter{\label{chap:intro}Introducción}
 
-Scala smoothly integrates object-oriented and functional
-programming. It is designed to express common programming patterns in
-a concise, elegant, and type-safe way.  Scala introduces several
-innovative language constructs. For instance:
+Scala integra sin irregularidades programación orientada a objetos y
+funcional. Se diseñó para expresar patrones de programación comunes
+en una manera concisa, elegante y de tipado seguro. Scala introduce
+varias constructos de lenguaje innovadores. Por ejemplo:
 \begin{itemize}
 \item
-Abstract types and mixin composition unify concepts from object and
-  module systems.
+Conceptos unificadores de tipos abstractos y composición de mezcla del
+los sistemas de objeto y módulo.
 \item
-Pattern matching over class hierarchies unifies functional and
-  object-oriented data access. It greatly simplifies the processing of
-  XML trees.
+Los patrones concordantes sobre jerarquía unifican cómo tener acceso a
+información funcional y orientada a objetos. Esto simplifica enormemente
+el procesar árboles XML.
 \item
-A flexible syntax and type system enables the construction of advanced
-  libraries and new domain specific languages.
+Una sintaxis flexible y un sistema de tipado que habilitan la
+construcción de bibliotecas avanzadas y nuevos lenguajes de dominio
+específico (DSL, por sus siglas en inglés, {\em Domain Specific
+Language}).
 \end{itemize}
-At the same time, Scala is compatible with Java.  Java libraries and
-frameworks can be used without glue code or additional declarations.
+Al mismo tiempo, Scala es compatible con Java. Las bibliotecas de Java
+y los {\em Frameworks} se pueden utilizar sin código pegamento o
+declaraciones adicionales.
 
-This document introduces Scala in an informal way, through a sequence
-of examples.
+Este documento introduce Scala de una manera informal, mediante una
+secuencia de ejemplos.
 
-Chapters~\ref{chap:example-one} and \ref{chap:example-auction}
-highlight some of the features that make Scala interesting. The
-following chapters introduce the language constructs of Scala in a
-more thorough way, starting with simple expressions and functions, and
-working up through objects and classes, lists and streams, mutable
-state, pattern matching to more complete examples that show
-interesting programming techniques. The present informal exposition is
-meant to be complemented by the Scala Language Reference Manual which
-specifies Scala in a more detailed and precise way.
+Los capítulos~\ref{chap:example-one} y \ref{chap:example-auction}
+enfatizan algunas de las características que hacen a Scala interesante.
+Los siguientes capítulos intrudcen los constructos del lenguaje Scala
+de manera más cuidadosa, comenzando con expresiones y funciones simples,
+y trabajando sobre y mediante objetos y clases, listas y {\em streams}
+estados mutables, concordancia de patrones a ejemplos más complejos que
+muestran técnicas de programación interesantes. La presente exposición
+informal tiene la intención de completarse por el Manual de Referencia
+del Lenguaje Scala, el cual especifica Scala en una manera más detallada
+y precisa.
 
-\paragraph{Acknowledgment}
-We owe a great debt to Abelson's and Sussman's wonderful book
+\paragraph{Reconocimiento}
+Estamos en gran deuda con el maravilloso libro
 ``Structure and Interpretation of Computer
-Programs''\cite{abelson-sussman:structure}. Many of their examples and
-exercises are also present here. Of course, the working language has
-in each case been changed from Scheme to Scala. Furthermore, the
-examples make use of Scala's object-oriented constructs where
-appropriate.
+Programs''\cite{abelson-sussman:structure} de Abelson y Sussman.
+Muchos de sus ejemplos y ejercicios también están presentes aquí. Por
+supuesto, trabajar con el lenguaje tiene en caa caso se ha cambiado de
+Scheme a Scala. Además, los ejemplos hacen uso de los constructos
+orientados a objetos donde es apropiado.
 
 \input{ExamplesPart}
 \bibliographystyle{alpha}
