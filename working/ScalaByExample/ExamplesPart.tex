@@ -1,10 +1,12 @@
+﻿
+
 \def\exercise{
    \def\theresult{Exercise~\thesection.\arabic{result}}
    \refstepcounter{result}
    \trivlist\item[\hskip
    \labelsep{\bf \theresult}]}
 \def\endexercise{\endtrivlist}
- 
+
 \newcommand{\rewriteby}[1]{\mbox{\tab\tab\rm(#1)}}
 
 \chapter{\label{chap:example-one}Un primer ejemplo}
@@ -56,7 +58,7 @@ y las selecciones del arreglo se escriben \code{a(i)} en lugar de
 \item
 Las funciones pueden anidarse dentro de otras funciones. Las funciones
 anidadas pueden tener acceso a parámetros y variables locales de las
-funciones donde estan incluídas. Por ejemplo, el nombre del arreglo 
+funciones donde están incluidas. Por ejemplo, el nombre del arreglo 
 \code{xs} es visible tanto en la función \code{swap}, como en la función
 \code{sort1}, y por lo tanto no se les requiere pasar como un argumento.
 \end{itemize}
@@ -70,7 +72,7 @@ como Java, C\# o Visual Basic.
 
 Sin embargo, también es posible escribir programas en un estilo que
 luzca completamente diferente. He aquí un {\em Quicksort} de nuevo,
-pero escrito esta vez en estilo funcional.
+pero esta vez escrito en estilo funcional.
 
 \begin{lstlisting}
 def sort(xs: Array[Int]): Array[Int] = {
@@ -93,11 +95,12 @@ de una manera concisa:
 \item Si el arreglo no está vacío ni es único, se selecciona un 
       elemento a la mitad del arreglo como si fuera un pivote.
 \item Se parte el arreglo en dos subarreglos conteniendo elementos que,
-respectivamente, sean menores y mayores que el elemento pivote, y un
-tercer arreglo que contiene los elementos igual al pivote.
+respectivamente, sean menores y mayores que el elemento pivote, y 
+un tercer arreglo que contiene los elementos igual al 
+pivote (con el método \code{filter}).
 \item Se ordenan los primeros dos subarreglos por invocación recursiva
 de la función de ordenación.\footnote{Esto no es exactamente lo que hace
-el algoritmo imperativo; el llamado posterior, parte el arreglo en dos
+el algoritmo imperativo; el llamado posterior de la función, parte el arreglo en dos
 subarreglos conteniendo elementos menores o mayores o iguales al
 pivote.}
 \item El resultado se obtiene al acomodar los tres subarreglos juntos.
@@ -107,24 +110,24 @@ complejidad asintótica -- $O(N;log(N))$ en el caso promedio y
 $O(N^2)$ en el peor caso. Pero donde la implementación imperativa opera
 sobre el arreglo que le llega como argumento modificandolo, la 
 implementación funcional regresa un nuevo arreglo acomodado y deja 
-el arreglo que le llega como argumento sin ningun cambio. 
+el arreglo que le llega como argumento sin ningún cambio. 
 La implementación funcional requiere más memoria transitiva que
 la imperativa.
 
-La implementación imperativa hace parecer a Scala como si fuera
+La implementación funcional hace parecer a Scala como si fuera
 un lenguaje que se especializa en operaciones funcionales sobre
 arreglos. De hecho, no es así; todas las operaciones utilizadas en el
-ejemplo son simples métodos de biblioteca de una
-{\em sequence} class \code{Seq[T]} los cuales son parte de la biblioteca
+ejemplo son simples métodos de biblioteca de una clase
+{\em sequence} \code{Seq[T]}, los cuales son parte de la biblioteca
 estándar de Scala, ella misma implementada en Scala. Debido a que los
-arreglos son instancias de \verb@Seq@ todos los métodos de sequencia
+arreglos son instancias de \verb@Seq@ todos los métodos de {\em sequence}
 están disponibles para ellos.
 
 En particular, hay un método \code{filter} que toma como argumento una
 {\em función de predicado}. Esta función de predicado debe mapear
-elementos de arreglo a valores {\em boolean}. El resultado de
-\code{filter} es un arreglo consistente en todos los elementos de
-arreglo original para el cual la función de predicado es
+los elementos del arreglo a valores {\em booleanos}. El resultado de
+\code{filter} es un arreglo consistente con todos los elementos de
+arreglo original para los cuales la función de predicado es
 {\em true}. El método \code{filter} de un objeto de tipo
 \code{Array[T]} tiene esta estructura
 
@@ -140,27 +143,27 @@ como resultado se llaman funciones {\em de orden mayor}
 
 Scala no distingue entre identificadores y nombres de operador. Un
 identificador puede ser tanto una secuencia de letras y dígitos que
-comiencen con una letra, o pueden ser una secuencia de carácteres
-especiales, tales como ``\code{+}'', ``\code{*}'', o ``\code{:}''. 
-Cualquier identificador puede suarse como un operador infijo.
+comiencen con una letra, o pueden ser una secuencia de caracteres
+especiales, tales como “\code{+}”, “\code{*}”, o “\code{:}”. 
+Cualquier identificador puede usarse como un operador infijo en Scala.
 La operación binaria $E;op;E'$ se interpreta siempre como una llamada
 del método $E.op(E')$. Esto también aplica para operadores infijos
 binarios los cuales comiencen con una letra. Por lo tanto, la expresión
-~\lstinline@xs filter (pivot >)@~ es equivalente a la llamada de método
+~\lstinline@xs filter (pivot >)@~ es equivalente a la llamada del método
 ~\lstinline@xs.filter(pivot >)@.
 
-En el programa {\em Quicksort}, \code{filter} se aplica tres veces a un
-argumento de función anónima. El primer argumento, \code{pivot >},
-representa una función que toma un argumento $x$ y regresa el valor
+En el programa {\em Quicksort}, a \code{filter} se aplica tres veces una 
+función anónima como argumento. El primer argumento, \code{pivot >},
+representa una función que toma a $x$ como argumento y regresa el valor
 ~\lstinline@pivot > $x$@. Este es un ejemplo de una {\em función
-parcialmente aplicada}. ({\em Partially applied function}, en inglés). 
+parcialmente aplicada} ({\em Partially applied function}, en inglés). 
 Otra manera equivalente de escribir esta función
-la cual hace al argumento faltante explícito es
+la cual muestra explícitamente al argumento faltante es 
 ~\lstinline@x => pivot > x@.
 La función es anónima, es decir, no se define con un nombre. El tipo de
 parámetro \code{x} se omite porque el compilador de Scala puede
-inferirlo automáticamente del contexto donde la función se use. Para
-resumir, \code{xs.filter(pivot >)} regresa una lista consitente en todos
+inferirlo automáticamente del contexto donde la función se usa. Para
+resumir, \code{xs.filter(pivot >)} regresa una lista consistente con todos
 los elementos de la lista \code{xs} que sean más pequeños que
 \code{pivot}.
 
@@ -169,20 +172,20 @@ Al mirar de nuevo en detalle a la primera implementación imperativa de
 utilizados en la segunda solución están también presentes, no obstante,
 en una forma disfrazada.
 
-Por ejemplo, los operadores binarios ``estándar'' tales como \code{+},
+Por ejemplo, los operadores binarios “estándar” tales como \code{+},
 \code{-}, o \code{<} no se tratan de ninguna manera especial. Como
 \code{append}, son métodos de sus operando izquierdo. Consecuentemente,
 la expresión \code{i + 1} se mira como la invocación \code{i.+(1)} del
 método \code{+} del valor entero \code{x}.
 
 Por supuesto, un compilador es libre (y si es moderadamente inteligente,
-incluso se espera) de reconocer el caso especial al llamar al método
+incluso se espera) de reconocer el caso especial en al llamar al método
 \code{+} sobre argumentos enteros y generar código eficiente
 para ello en una línea.
 
 Para un diagnóstico de errores más eficiente y mejor, el ciclo 
 \code{while} es un constructo primitivo en Scala. Pero en principio, 
-podría haber sido igual de bien una función predefinida. Aquí hay una
+bien podría haber sido una función predefinida. Aquí hay una
 posible implementación de él:
 \begin{lstlisting}
 def While (p: => Boolean) (s: => Unit) {
@@ -197,16 +200,16 @@ parámetros y produce un resultado del tipo \lstinline@Unit@.
 produce {\em true}.
 
 El tipado \lstinline@Unit@ de Scala corresponde a grandes rasgos al
-\lstinline@void@ en Java< se usa simpre que una función no regrese un
-resultado interesante. De hecho, porque Scala es un lenguaje orientado
+\lstinline@void@ en Java; se usa siempre que una función no regrese un
+resultado interesante. De hecho, como Scala es un lenguaje orientado
 a expresiones, cada función regresa algún resultado. Si no se da una
 expresión de regreso explícita, se asume el valor \lstinline@()@, que se
-pronuncia ``unit''. Este valor es del tipo \lstinline@Unit@.
-Las funciones que regresen {\em Unit} también se llaman
+pronuncia “unit”. Este valor es del tipo \lstinline@Unit@.
+Las funciones que regresan {\em Unit} también se llaman
 {\em procedimientos}.  
-Aquí está una formúlación más ``orientada a expresiones'' de la función
-\lstinline@swap@ en la primera implementación del {\em Quicksort}, lo
-cual hace esto explícita:
+Aquí está una formulación más “orientada a expresiones” de la función
+\lstinline@swap@ en la primera implementación del {\em Quicksort},  
+que hace esto explicito:
 \begin{lstlisting}
 def swap(i: Int, j: Int) {
   val t = xs(i); xs(i) = xs(j); xs(j) = t
@@ -214,22 +217,17 @@ def swap(i: Int, j: Int) {
 }
 \end{lstlisting}
 El valor que retorna esta función es simplemente su última expresión
--- una palabra clave
-\lstinline@return@ no es necesaria. Nótese que las funciones que
-regresan un valor explícito necesitan un ``='' antes de definir su cuerpo
-o de definir sus expresiones.
+-- una palabra clave \lstinline@return@ no es necesaria.  Nótese que 
+las funciones que regresan un valor explícito necesitan un “=” antes 
+de definir su cuerpo o de definir sus expresiones.
 
-\chapter{Programming with Actors and Messages}
+
+%  :)
+
+\chapter{Programando con Actores y Mensajes}
 \label{chap:example-auction}
 
-Here's an example that shows an application area for which Scala is
-particularly well suited. Consider the task of implementing an
-electronic auction service. We use an Erlang-style actor process
-model to implement the participants of the auction. Actors are
-objects to which messages are sent. Every actor has a ``mailbox'' of
-its incoming messages which is represented as a queue. It can work
-sequentially through the messages in its mailbox, or search for
-messages matching some pattern.
+Aquí tenemos un ejemplo que muestra un área de aplicación para la cual Scala es particularmente bueno. Considere la tarea de implementar un servicio electrónico de subastas. Usamos un modelo de procesamiento de actores (en inglés, {\em actor process model}) al estilo Erlang para implementar a los participantes de la subasta. Los “actores” son objetos que pueden enviar mensajes. Cada actor tiene una “bandeja de entrada” donde llegan los mensajes, que son representados como una cola. Trabaja secuencialmente la cola de mensajes en su bandeja de entrada, o realiza la búsqueda de patrones en los mensajes.
 
 \begin{lstlisting}[style=floating,label=fig:simple-auction-msgs,caption=Message
     Classes for an Auction Service]
@@ -249,14 +247,9 @@ case object AuctionFailed                    extends AuctionReply
 case object AuctionOver                      extends AuctionReply
 \end{lstlisting}
 
-For every traded item there is an auctioneer actor that publishes
-information about the traded item, that accepts offers from clients
-and that communicates with the seller and winning bidder to close the
-transaction. We present an overview of a simple implementation
-here.
+For every traded item there is an auctioneer actor that publishes information about the traded item, that accepts offers from clients and that communicates with the seller and winning bidder to close the transaction. We present an overview of a simple implementation here.
 
-As a first step, we define the messages that are exchanged during an
-auction. There are two abstract base classes
+As a first step, we define the messages that are exchanged during an auction. There are two abstract base classes
 \code{AuctionMessage} for messages from clients to the auction
 service, and \code{AuctionReply} for replies from the service to the
 clients.  For both base classes there exists a number of cases, which

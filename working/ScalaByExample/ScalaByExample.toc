@@ -2,7 +2,7 @@
 \contentsline {chapter}{\numberline {1}Introducci\IeC {\'o}n}{1}{chapter.1}
 \contentsline {paragraph}{Reconocimiento}{2}{paragraph*.2}
 \contentsline {chapter}{\numberline {2}Un primer ejemplo}{3}{chapter.2}
-\contentsline {chapter}{\numberline {3}Programming with Actors and Messages}{9}{chapter.3}
+\contentsline {chapter}{\numberline {3}Programando con Actores y Mensajes}{9}{chapter.3}
 \contentsline {chapter}{\numberline {4}Expressions and Simple Functions}{13}{chapter.4}
 \contentsline {section}{\numberline {4.1}Expressions And Simple Functions}{13}{section.4.1}
 \contentsline {section}{\numberline {4.2}Parameters}{14}{section.4.2}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.3.25)  29 MAY 2011 16:21
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2011.3.25)  6 JUN 2011 16:18
 entering extended mode
  %&-line parsing enabled.
 **ScalaByExample.tex
@@ -1066,27 +1066,27 @@ t line 79.
 
 ] (./ExamplesPart.tex [2]
 Cap\'{\i }tulo 2.
-LaTeX Font Info:    Try loading font information for T1+ul9 on input line 15.
+LaTeX Font Info:    Try loading font information for T1+ul9 on input line 17.
 (/usr/local/share/texmf/tex/latex/luxi/t1ul9.fd
 File: t1ul9.fd 2003/03/02 font definitions for LuxiMono T1/ul9
 )
 LaTeX Font Info:    Font shape `T1/ul9/m/n' will be
-(Font)              scaled to size 9.60004pt on input line 15.
+(Font)              scaled to size 9.60004pt on input line 17.
 LaTeX Font Info:    Font shape `T1/ul9/bx/n' in size <12> not available
-(Font)              Font shape `T1/ul9/b/n' tried instead on input line 16.
+(Font)              Font shape `T1/ul9/b/n' tried instead on input line 18.
 LaTeX Font Info:    Font shape `T1/ul9/b/n' will be
-(Font)              scaled to size 9.60004pt on input line 16.
+(Font)              scaled to size 9.60004pt on input line 18.
  [3
 
 ]
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 6.99199pt on input line 102.
+(Font)              scaled to size 6.99199pt on input line 105.
 LaTeX Font Info:    Font shape `FMX/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 102.
+(Font)              scaled to size 5.51999pt on input line 105.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 6.99199pt on input line 102.
+(Font)              scaled to size 6.99199pt on input line 105.
 LaTeX Font Info:    Font shape `U/futm/m/n' will be
-(Font)              scaled to size 5.51999pt on input line 102.
+(Font)              scaled to size 5.51999pt on input line 105.
  [4] [5]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
@@ -1096,36 +1096,36 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ]
 Cap\'{\i }tulo 3.
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 235.
+nput line 233.
 LaTeX Font Info:    Font shape `T1/futs/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/futs/b/n' tried instead on input line 250.
+(Font)              Font shape `T1/futs/b/n' tried instead on input line 248.
 
-Overfull \hbox (17.78304pt too wide) in paragraph at lines 266--267
+Overfull \hbox (17.78304pt too wide) in paragraph at lines 264--265
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 340--347
+Underfull \hbox (badness 10000) in paragraph at lines 338--345
 []\T1/futs/m/n/12 Reply mes-sa-ges are sent using syn-tax of the form
  []
 
 [10] [11] [12]
 Cap\'{\i }tulo 4.
 LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/phv/b/n' tried instead on input line 380.
+(Font)              Font shape `T1/phv/b/n' tried instead on input line 378.
 [13
 
 ] [14] [15]
 LaTeX Font Info:    Font shape `T1/ul9/m/it' in size <12> not available
-(Font)              Font shape `T1/ul9/m/sl' tried instead on input line 563.
+(Font)              Font shape `T1/ul9/m/sl' tried instead on input line 561.
 LaTeX Font Info:    Font shape `T1/ul9/m/sl' will be
-(Font)              scaled to size 9.60004pt on input line 563.
+(Font)              scaled to size 9.60004pt on input line 561.
  [16] [17] [18] [19] [20] [21] [22
 
 ]
 Cap\'{\i }tulo 5.
 
-Overfull \hbox (18.57867pt too wide) in paragraph at lines 862--863
+Overfull \hbox (18.57867pt too wide) in paragraph at lines 860--861
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][] 
  []
@@ -1143,17 +1143,17 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ]
 [34] [35]
-Overfull \hbox (17.0441pt too wide) in paragraph at lines 1543--1544
+Overfull \hbox (17.0441pt too wide) in paragraph at lines 1541--1542
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (11.47607pt too wide) in paragraph at lines 1548--1549
+Overfull \hbox (11.47607pt too wide) in paragraph at lines 1546--1547
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 [36]
-Underfull \hbox (badness 1194) in paragraph at lines 1559--1562
+Underfull \hbox (badness 1194) in paragraph at lines 1557--1560
 \T1/futs/m/n/12 Both [][][] and [][][] ex-tend class [][][]. This im-plies that
  ty-pes
  []
@@ -1173,7 +1173,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ]
 Cap\'{\i }tulo 7.
 
-Underfull \hbox (badness 2837) in paragraph at lines 1879--1879
+Underfull \hbox (badness 2837) in paragraph at lines 1877--1877
 |\T1/phv/b/n/24.88 Case Clas-ses and Pat-tern Mat-
  []
 
@@ -1188,7 +1188,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [47]
 [48] [49] [50] [51]
-Overfull \hbox (11.47607pt too wide) in paragraph at lines 2219--2220
+Overfull \hbox (11.47607pt too wide) in paragraph at lines 2217--2218
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
@@ -1201,13 +1201,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ]
 [54] [55]
-Overfull \hbox (39.3162pt too wide) in paragraph at lines 2425--2426
+Overfull \hbox (39.3162pt too wide) in paragraph at lines 2423--2424
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][] 
  []
 
 
-Underfull \hbox (badness 8075) in paragraph at lines 2442--2446
+Underfull \hbox (badness 8075) in paragraph at lines 2440--2444
 \T1/futs/m/n/12 Note that we ha-ve left out the ty-pe ar-gu-ment in the ob-ject
  crea-tions
  []
@@ -1230,7 +1230,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [62]
-Underfull \hbox (badness 1248) in paragraph at lines 2821--2830
+Underfull \hbox (badness 1248) in paragraph at lines 2819--2828
 \T1/futs/m/n/12 It's sound to bind the va-lue [][][] of ty-pe [][][][][][][] to
  [][][], which is of ty-pe
  []
@@ -1238,7 +1238,7 @@ Underfull \hbox (badness 1248) in paragraph at lines 2821--2830
 [63] [64]
 Cap\'{\i }tulo 9.
 
-Overfull \hbox (33.74817pt too wide) in paragraph at lines 2884--2885
+Overfull \hbox (33.74817pt too wide) in paragraph at lines 2882--2883
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
 
  []
@@ -1246,13 +1246,13 @@ Overfull \hbox (33.74817pt too wide) in paragraph at lines 2884--2885
 [65
 
 ]
-Underfull \hbox (badness 6348) in paragraph at lines 2904--2908
+Underfull \hbox (badness 6348) in paragraph at lines 2902--2906
 \T1/futs/m/n/12 The `[][][]' ope-ra-tion as-so-cia-tes to the right: [][][][][]
 [][][][][][] is in-ter-pre-ted as
  []
 
 [66] [67] [68] [69]
-Underfull \hbox (badness 1226) in paragraph at lines 3146--3149
+Underfull \hbox (badness 1226) in paragraph at lines 3144--3147
 [] []\T1/futs/b/n/12 Re-ver-sing lists.[] \T1/futs/m/n/12 Anot-her use-ful ope-
 ra-tion is list re-ver-sal. The-re is a met-hod
  []
@@ -1261,7 +1261,7 @@ ra-tion is list re-ver-sal. The-re is a met-hod
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [71]
-Overfull \hbox (11.47607pt too wide) in paragraph at lines 3249--3250
+Overfull \hbox (11.47607pt too wide) in paragraph at lines 3247--3248
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
@@ -1270,7 +1270,7 @@ Underfull \vbox (badness 1122) has occurred while \output is active []
 
  [74]
 [75] [76]
-Overfull \hbox (11.47607pt too wide) in paragraph at lines 3520--3521
+Overfull \hbox (11.47607pt too wide) in paragraph at lines 3518--3519
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][] 
  []
@@ -1291,12 +1291,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [81]
 [82]
-Overfull \hbox (22.61212pt too wide) in paragraph at lines 4150--4151
+Overfull \hbox (22.61212pt too wide) in paragraph at lines 4148--4149
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 [83] [84] [85] [86]
-Underfull \hbox (badness 1558) in paragraph at lines 4326--4330
+Underfull \hbox (badness 1558) in paragraph at lines 4324--4328
 []\T1/futs/m/n/12 One ca-veat: It is not as-su-red au-to-ma-ti-ca-lly that the 
 re-sult trans-la-ting a for-
  []
@@ -1308,25 +1308,25 @@ Cap\'{\i }tulo 11.
 [89] [90] [91] [92] [93]
 
 LaTeX Warning: Citation `abelson-sussman:structure' on page 94 undefined on inp
-ut line 4637.
+ut line 4635.
 
 [94]
 Underfull \vbox (badness 1348) has occurred while \output is active []
 
  [95]
-Underfull \hbox (badness 1210) in paragraph at lines 4732--4739
+Underfull \hbox (badness 1210) in paragraph at lines 4730--4737
 \T1/futs/m/n/12 Here, [][][] re-turns the cu-rrent si-mu-la-ted ti-me as an in-
 te-ger num-ber,
  []
 
 
-Underfull \hbox (badness 2435) in paragraph at lines 4732--4739
+Underfull \hbox (badness 2435) in paragraph at lines 4730--4737
 [][][] \T1/futs/m/n/12 sche-du-les an ac-tion to be per-for-med at a spe-ci-fie
 d de-lay af-ter
  []
 
 [96]
-Underfull \hbox (badness 1173) in paragraph at lines 4832--4835
+Underfull \hbox (badness 1173) in paragraph at lines 4830--4833
 \T1/futs/m/n/12 An ap-pli-ca-tion of the met-hod [][][][][][][][][] in-serts th
 e ele-ment
  []
@@ -1344,24 +1344,24 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ]
 Cap\'{\i }tulo 13.
 [105]
-Overfull \hbox (17.0441pt too wide) in paragraph at lines 5074--5075
+Overfull \hbox (17.0441pt too wide) in paragraph at lines 5072--5073
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Underfull \hbox (badness 1365) in paragraph at lines 5077--5084
+Underfull \hbox (badness 1365) in paragraph at lines 5075--5082
 [][][] \T1/futs/m/n/12 call the co-rres-pon-ding met-hods as they are de-fi-ned
  in the en-clo-sing
  []
 
 
-Overfull \hbox (33.74817pt too wide) in paragraph at lines 5103--5104
+Overfull \hbox (33.74817pt too wide) in paragraph at lines 5101--5102
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
 
  []
 
 
-Overfull \hbox (17.0441pt too wide) in paragraph at lines 5107--5108
+Overfull \hbox (17.0441pt too wide) in paragraph at lines 5105--5106
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
 
  []
@@ -1389,7 +1389,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ]
 Cap\'{\i }tulo 15.
 
-Underfull \hbox (badness 1874) in paragraph at lines 5374--5374
+Underfull \hbox (badness 1874) in paragraph at lines 5372--5372
 |\T1/phv/b/n/24.88 Implicit Pa-ra-me-ters and Con-ver-
  []
 
@@ -1404,7 +1404,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Cap\'{\i }tulo 16.
 
 LaTeX Warning: Citation `milner:polymorphism' on page 119 undefined on input li
-ne 6022.
+ne 6020.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1412,24 +1412,24 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [119
 
 ]
-Overfull \hbox (17.0441pt too wide) in paragraph at lines 6095--6096
+Overfull \hbox (17.0441pt too wide) in paragraph at lines 6093--6094
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (11.47607pt too wide) in paragraph at lines 6101--6102
+Overfull \hbox (11.47607pt too wide) in paragraph at lines 6099--6100
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][][][] 
  []
 
 LaTeX Font Info:    Font shape `T1/ul9/m/n' will be
-(Font)              scaled to size 8.00003pt on input line 6112.
+(Font)              scaled to size 8.00003pt on input line 6110.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [120]
-Overfull \hbox (5.90805pt too wide) in paragraph at lines 6130--6131
+Overfull \hbox (5.90805pt too wide) in paragraph at lines 6128--6129
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
@@ -1439,13 +1439,13 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [122]
 
 LaTeX Warning: Citation `milner:polymorphism' on page 123 undefined on input li
-ne 6245.
+ne 6243.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [123]
-Overfull \hbox (17.0441pt too wide) in paragraph at lines 6306--6307
+Overfull \hbox (17.0441pt too wide) in paragraph at lines 6304--6305
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
@@ -1453,7 +1453,7 @@ Overfull \hbox (17.0441pt too wide) in paragraph at lines 6306--6307
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [124]
-Overfull \hbox (17.0441pt too wide) in paragraph at lines 6340--6341
+Overfull \hbox (17.0441pt too wide) in paragraph at lines 6338--6339
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
@@ -1472,7 +1472,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 1924) has occurred while \output is active []
 
  [135]
-Overfull \hbox (17.0441pt too wide) in paragraph at lines 7006--7007
+Overfull \hbox (17.0441pt too wide) in paragraph at lines 7004--7005
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
@@ -1491,19 +1491,22 @@ No file ScalaByExample.bbl.
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  )
 (\end occurred inside a group at level 1)
 
-### simple group (level 1) entered at line 4243 ({)
+### simple group (level 1) entered at line 4241 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 12857 strings out of 494999
- 179347 string characters out of 1180816
+ 12853 strings out of 494999
+ 179296 string characters out of 1180816
  251638 words of memory out of 3000000
- 13100 multiletter control sequences out of 15000+50000
+ 13096 multiletter control sequences out of 15000+50000
  134274 words of font info for 128 fonts, out of 3000000 for 9000
  54 hyphenation exceptions out of 8191
- 45i,15n,51p,315b,2001s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 45i,15n,51p,684b,2001s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf-texlive/fonts/enc/dvips/base/8r.enc}</usr/sha
 re/texmf-texlive/fonts/type1/public/fourier/fourier-mex.pfb></usr/share/texmf-t
 exlive/fonts/type1/public/fourier/fourier-mlit.pfb></usr/share/texmf-texlive/fo
@@ -1515,7 +1518,7 @@ onts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/he
 lvetic/uhvr8a.pfb></usr/local/share/texmf/fonts/type1/bh/luxi/ul9b8a.pfb></usr/
 local/share/texmf/fonts/type1/bh/luxi/ul9r8a.pfb></usr/local/share/texmf/fonts/
 type1/bh/luxi/ul9ro8a.pfb>
-Output written on ScalaByExample.pdf (145 pages, 889649 bytes).
+Output written on ScalaByExample.pdf (145 pages, 889819 bytes).
 PDF statistics:
  4040 PDF objects out of 4296 (max. 8388607)
  2700 named destinations out of 2984 (max. 500000)
