@@ -1,4 +1,3 @@
-﻿
 
 \def\exercise{
    \def\theresult{Exercise~\thesection.\arabic{result}}
@@ -127,8 +126,8 @@ En particular, hay un método \code{filter} que toma como argumento una
 {\em función de predicado}. Esta función de predicado debe mapear
 los elementos del arreglo a valores {\em booleanos}. El resultado de
 \code{filter} es un arreglo consistente con todos los elementos de
-arreglo original para los cuales la función de predicado es
-{\em true}. El método \code{filter} de un objeto de tipo
+arreglo original para los cuales la función de predicado es verdadera 
+({\em true}en ingles). El método \code{filter} de un objeto de tipo
 \code{Array[T]} tiene esta estructura
 
 \begin{lstlisting}
@@ -227,10 +226,9 @@ de definir su cuerpo o de definir sus expresiones.
 \chapter{Programando con Actores y Mensajes}
 \label{chap:example-auction}
 
-Aquí tenemos un ejemplo que muestra un área de aplicación para la cual Scala es particularmente bueno. Considere la tarea de implementar un servicio electrónico de subastas. Usamos un modelo de procesamiento de actores (en inglés, {\em actor process model}) al estilo Erlang para implementar a los participantes de la subasta. Los “actores” son objetos que pueden enviar mensajes. Cada actor tiene una “bandeja de entrada” donde llegan los mensajes, que son representados como una cola. Trabaja secuencialmente la cola de mensajes en su bandeja de entrada, o realiza la búsqueda de patrones en los mensajes.
+Aquí tenemos un ejemplo que muestra un área de aplicación para la cual Scala es particularmente bueno. Considere la tarea de implementar un servicio electrónico de subastas. Usamos un modelo de procesamiento de actores (en inglés, {\em actor process model}) al estilo Erlang para implementar a los participantes de la subasta. Los “actores” son objetos que pueden enviar mensajes. Cada actor tiene una “bandeja de entrada” donde llegan los mensajes, que son representados como una cola. Puede trabajar secuencialmente la cola de mensajes en su bandeja de entrada, o realizar una búsqueda de patrones en los mensajes.
 
-\begin{lstlisting}[style=floating,label=fig:simple-auction-msgs,caption=Message
-    Classes for an Auction Service]
+\begin{lstlisting}[style=floating,label=fig:simple-auction-msgs,caption=Clases de mensajes para un servicio de Subastas.]
 import scala.actors.Actor
 
 abstract class AuctionMessage
@@ -247,15 +245,11 @@ case object AuctionFailed                    extends AuctionReply
 case object AuctionOver                      extends AuctionReply
 \end{lstlisting}
 
-For every traded item there is an auctioneer actor that publishes information about the traded item, that accepts offers from clients and that communicates with the seller and winning bidder to close the transaction. We present an overview of a simple implementation here.
+Para cada articulo comercializable hay un actor subastador que publica información sobre el articulo, se encarga de aceptar las ofertas de los clientes y de comunicarse con el vendedor y el comprador ganador para cerrar la transacción. Presentaremos aquí la visión general de una implementación simple.
 
-As a first step, we define the messages that are exchanged during an auction. There are two abstract base classes
-\code{AuctionMessage} for messages from clients to the auction
-service, and \code{AuctionReply} for replies from the service to the
-clients.  For both base classes there exists a number of cases, which
-are defined in Figure~\ref{fig:simple-auction-msgs}.
+Como primer paso, se definen los mensajes que se intercambian durante una subasta. Hay dos clases  abstractas base: \code{AuctionMessage} para los mensajes de los clientes con el servicio de subastas, y \code{AuctionReply} para las respuestas del servicio a los clientes. Para ambas clases base existe un número de casos, que se definen en la Figura~\ref{fig:simple-auction-msgs}
 
-\begin{lstlisting}[style=floating,label=fig:simple-auction,caption=Implementation of an Auction Service]
+\begin{lstlisting}[style=floating,label=fig:simple-auction,caption=Implementación de un servicio de subastas.]
 class Auction(seller: Actor, minBid: Int, closing: Date) extends Actor {
   val timeToShutdown = 36000000  // msec
   val bidIncrement = 10
@@ -291,77 +285,46 @@ class Auction(seller: Actor, minBid: Int, closing: Date) extends Actor {
 }
 \end{lstlisting}
 
-For each base class, there are a number of {\em case classes} which
-define the format of particular messages in the class. These messages
-might well be ultimately mapped to small XML documents. We expect
-automatic tools to exist that convert between XML documents and
-internal data structures like the ones defined above.
+Para cada clase base, hay una serie de {\em case classes} que definen el formato de los mensajes particulares de la clase. Estos mensajes también pueden ser asignados finalmente a pequeños documentos XML. Suponemos la existencia de herramientas automáticas para la conversión entre documentos XML y estructuras de datos internas como las definidas anteriormente.
 
-Figure~\ref{fig:simple-auction} presents a Scala implementation of a
-class \code{Auction} for auction actors that coordinate the bidding
-on one item. Objects of this class are created by indicating
+La Figura~\ref{fig:simple-auction} presenta la implementación en Scala de una clase \code{Auction} para actores de subastas que coordinan la oferta en un artículo. Los objetos de esta clase se crean mediante la indicación de
 \begin{itemize}
-\item a seller actor which needs to be notified when the auction is over,
-\item a minimal bid,
-\item the date when the auction is to be closed.
+\item un actor “vendedor”({\em seller} en inglés) que debe ser notificado cuando la subasta haya terminado,
+\item una oferta mínima,
+\item la fecha en que la subasta cerrará.
 \end{itemize}
-The behavior of the actor is defined by its \code{act} method. That method
-repeatedly selects (using \code{receiveWithin}) a message and reacts to it,
-until the auction is closed, which is signaled by a \code{TIMEOUT}
-message. Before finally stopping, it stays active for another period
-determined by the \code{timeToShutdown} constant and replies to
-further offers that the auction is closed.
+El comportamiento del actor es definido por su método \code{act}. Este método selecciona repetidas  veces (usando \code{receiveWithin}) un mensaje y reacciona según su tipo, hasta que la subasta se cierra, que es señalado por un mensaje \code{TIMEOUT}. Antes de detenerse completamente, se mantiene activo durante un nuevo período determinado por la constante \code{timeToShutdown} y responde a las ofertas con que la subasta ya se ha cerrado.
 
-Here are some further explanations of the constructs used in this
-program:
+Aquí está la explicación más detallada de los constructos utilizados en este programa: 
 \begin{itemize}
 \item
-The \code{receiveWithin} method of class \code{Actor} takes as
-parameters a time span given in milliseconds and a function that
-processes messages in the mailbox. The function is given by a sequence
-of cases that each specify a pattern and an action to perform for
-messages matching the pattern. The \code{receiveWithin} method selects
-the first message in the mailbox which matches one of these patterns
-and applies the corresponding action to it.
+El método \code{receiveWithin} de la clase \code{Actor} toma como parámetros un período de tiempo determinado en milisegundos y una función que procesa los mensajes en el buzón (bandeja de entrada). La función, está dada por una serie de casos que especifican cada patrón y una acción a realizar según el patrón con el que coincida el mensaje. El método \code{receiveWithin} selecciona el primer mensaje en el buzón que coincide con uno de estos patrones y le aplica la acción que corresponde.
 \item
-The last case of \code{receiveWithin} is guarded by a
-\code{TIMEOUT} pattern. If no other messages are received in the meantime, this
-pattern is triggered after the time span which is passed as argument
-to the enclosing \code{receiveWithin} method. \code{TIMEOUT} is a
-special message, which is triggered by the \code{Actor} implementation itself.
+El último caso de \code{receiveWithin} está definido por el patrón \code{TIMEOUT}. Si no se reciben otros mensajes mientras tanto, este patrón se activa después del tiempo que se pasa como argumento al método \code{receiveWithin}. \code{TIMEOUT} es un mensaje especial, que se activa por la misma implementación del \code{Actor}.
 \item
-Reply messages are sent using syntax of the form
-\code{destination ! SomeMessage}. \code{!} is used here as a
-binary operator with an actor and a message as arguments. This is
-equivalent in Scala to the method call
-\code{destination.!(SomeMessage)}, i.e. the invocation of
-the \code{!} method of the destination actor with the given message as
-parameter.
+Los mensajes de respuesta se envían utilizando la sintaxis de la forma 
+\code{destino ! UnMensaje}. \code{!} Se utiliza aquí como un operador 
+binario, con un actor y un mensaje como argumentos. Esto en Scala es 
+equivalente a la llamada de métodos \code{destino.!(UnMensaje)}, 
+es decir, la invocación del método \code{!} del actor llamado “destino”, 
+con algún mensaje dado como parámetro.
 \end{itemize}
-The preceding discussion gave a flavor of distributed programming in
-Scala. It might seem that Scala has a rich set of language constructs
-that support actor processes, message sending and receiving,
-programming with timeouts, etc. In fact, the opposite is true. All the
-constructs discussed above are offered as methods in the library class
-\code{Actor}. That class is itself implemented in Scala, based on the underlying 
-thread model of the host language (e.g. Java, or .NET).
-The implementation of all features of class \code{Actor} used here is
-given in Section~\ref{sec:actors}.
 
-The advantages of the library-based approach are relative simplicity
-of the core language and flexibility for library designers. Because
-the core language need not specify details of high-level process
-communication, it can be kept simpler and more general. Because the
-particular model of messages in a mailbox is a library module, it can
-be freely modified if a different model is needed in some
-applications.  The approach requires however that the core language is
-expressive enough to provide the necessary language abstractions in a
-convenient way. Scala has been designed with this in mind; one of its
-major design goals was that it should be flexible enough to act as a
-convenient host language for domain specific languages implemented by
-library modules. For instance, the actor communication constructs
-presented above can be regarded as one such domain specific language,
-which conceptually extends the Scala core.
+La discusión anterior da una degustación de la programación distribuida en Scala. Podría 
+parecer que Scala posee un rico conjunto de constructos del lenguaje que apoyan los
+procedimientos con actores, el envío y recepción de mensaje, programación con tiempos 
+de espera, etc. De hecho, es todo lo contrario. Todos los constructos de lo discutido 
+arriba se ofrecen como métodos en la biblioteca de clases \code{Actor}. Esta clase está
+implementada en Scala, basadose en el modelo hilo conductor(en inglés, 
+{\em underlying thread model}) de la lengua huésped (por ejemplo, Java 
+o .NET\footnote{Aunque el compilador oficial de Scala está escrito en Java para 
+ser usado con la JMV, existe una versión escrita para la plataforma .NET; 
+cabe anotar, que es una versión desactualizada del lenguaje Scala.}).
+La aplicación de todas las características de la clase \code{Actor} se verán más 
+adelante en la sección~\ref{sec:actors}
+
+Las ventajas del enfoque basado en bibliotecas, son la sencillez relativa del núcleo del lenguaje y la flexibilidad para quienes diseñan bibliotecas. Debido a que no es necesario especificar los detalles del proceso de comunicación de alto nivel el núcleo del lenguaje, este se puede mantener más simple y más general. Debido a que el particular modelo de los mensajes en un buzón(bandeja de entrada) es un módulo de una biblioteca, este puede ser modificado libremente si se hace necesario un modelo diferente en alguna aplicación. El enfoque requiere sin embargo que el núcleo del lenguaje sea lo suficientemente expresivo como para proporcionar las abstracciones lingüísticas necesarias en una forma conveniente. Scala ha sido diseñado con esto en mente, uno de los principales objetivos en su diseño es que debe ser lo suficientemente flexible para actuar como un idioma práctico para acoger lenguajes de dominio específico aplicados mediante módulos de biblioteca. Por ejemplo, los constructos de comunicación del actor presentado anteriormente, puede considerarse como un lenguaje de dominio específico de ese tipo, que conceptualmente extiende el núcleo Scala. 
+
 
 \chapter{\label{chap:simple-funs}Expressions and Simple Functions}
 
