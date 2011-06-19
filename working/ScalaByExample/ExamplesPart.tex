@@ -333,7 +333,7 @@ Los ejemplos anteriores dan una impresión de lo que se puede hacer con Scala. A
 
 \section{Expreciones y Funciones Simples}
 
-Scala viene con un intérprete que puede ser visto como una calculadora de lujo (Esto será común a programadores que conzcan Python o Ruby, que son lenguajes que también vienen con interprete). El usuario interactúa con la calculadora, escribiendo expresiones. La calculadora devuelve los resultados de la evaluación y sus tipos. Por ejemplo:
+Scala viene con un intérprete que puede ser visto como una calculadora de lujo (Esto será común a programadores que conozcan Python o Ruby, que son lenguajes que también vienen con interprete). El usuario interactúa con la calculadora, escribiendo expresiones. La calculadora devuelve los resultados de la evaluación y sus tipos. Por ejemplo:
 
 \begin{lstlisting}
 scala> 87 + 145
@@ -363,17 +363,17 @@ radio: Int
 scala> 2 * pi * radio
 unnamed4: Double = 62.83185307179586
 \end{lstlisting}
-Las definiciones comienzan con la palabra reservada \code{def}; esto asigna un nombre que hace de sinónimo de la expresión que va despues del signo \code{=}. El intérprete responderá con el nombre asignado y su tipo.
+Las definiciones comienzan con la palabra reservada \code{def}; esto asigna un nombre que hace de sinónimo de la expresión que va después del signo \code{=}. El intérprete responderá con el nombre asignado y su tipo.
 
 Al ejecutar una definición como \code{def x = e} no se evaluará la expresión \code{e}. En su lugar, \code{e} se evalúa cada vez que \code{x} se utiliza. Por otra parte, Scala ofrece otro estilo de definición: \code{val x = e}, que evalúa el lado derecho \code{e} como parte de la evaluación de la definición. Si \code{x} se utiliza posteriormente, es inmediatamente sustituido por el valor pre-computado de \code{e}, por lo que la expresión no tiene que ser evaluada de nuevo.
  
-¿Cómo son evaluadas las expresiones? Una expresión consta de operadores y operandos, y se evalúa en repetidas ocasiones aplicando siguientes medidas simplificadas.
+¿Cómo son evaluadas las expresiones? Una expresión consta de operadores y operandos, y se evalúa en repetidas ocasiones aplicando las siguientes reglas de simplificación:
 \begin{itemize}
 \item Seleccionar la operación más a la izquierda
 \item evaluar esos operandos
 \item aplicar el operador a los valores operandos.
 \end {itemize}
-Un nombre definido por \code{def}\ se evalúa sustituyendo el nombre por la definición (sin evaluar) de la mano derecha. Un nombre definido por \code{val} se evalúa sustituyendo el nombre por el valor de la definición de la mano derecha. El proceso de evaluación se detiene una vez que han alcanzado un valor. Un valor es un elemento de datos como una cadena, un número, una matriz, o una lista.
+Un nombre definido con \code{def}\ se evalúa sustituyendolo por su definición (sin evaluar) que está a mano derecha. Un nombre definido con \code{val} se evalúa sustituyendolo por el valor de la definición que está a mano derecha. El proceso de evaluación se detiene una vez que han alcanzado un valor. Un valor es un elemento de datos como una cadena, un número, una matriz, o una lista.
 
 \example
 Aquí hay una evaluación de una expresión aritmética.
@@ -409,11 +409,11 @@ scala> sumOfSquares(3, 2 + 2)
 unnamed3: Double = 25.0
 \end{lstlisting}
 
-Los parámetros de una función van despues de su nombre y están siempre entre paréntesis. Todos los parámetros viene con un tipo, que se indica a continuación del nombre del parámetro y dos puntos (:). 
+Los parámetros de una función van después de su nombre y están siempre entre paréntesis. Todos los parámetros viene con un tipo, que se indica a continuación del nombre del parámetro y dos puntos (:). 
 %Actualmente, sólo necesitamos los tipos numéricos básicos tales como el tipo \code{scala.Double} para números de doble precisión. Scala define {\em tipos alias} para algunos tipos estándar, así que podemos escribir los tipos numéricos como en Java. Por ejemplo \code{double} es un alias de tipo de \code{scala.Double} y \code{int} es un alias de tipo de \code{scala.Int}.
 %OJO!! ESTO YA NO ES CIERTO EN SCALA 2.9!!!!!!!
 
-Las funciones con parámetros se evalúan de forma análoga a los operadores en las expresiones. En primer lugar, los argumentos de la función se evalúan (en orden de izquierda a derecha). A continuación, la función aplicada se sustituye por las funciónes que están a su lado derecho, y al mismo tiempo todos los parámetros formales de la función son reemplazados por sus argumentos reales correspondientes.
+Las funciones con parámetros se evalúan de forma análoga a los operadores en las expresiones. En primer lugar, los argumentos de la función se evalúan (en orden de izquierda a derecha). A continuación, la función aplicada se sustituye por las funciones que están a su lado derecho, y al mismo tiempo todos los parámetros formales de la función son reemplazados por sus argumentos reales correspondientes.
 
 \example\
  
@@ -428,10 +428,7 @@ $\rightarrow$  9 + 16
 $\rightarrow$  25
 \end{lstlisting}
 
-The example shows that the interpreter reduces function arguments to
-values before rewriting the function application.  One could instead
-have chosen to apply the function to unreduced arguments. This would
-have yielded the following reduction sequence:
+El ejemplo muestra que el intérprete reduce los argumentos de la función a valores, antes de volver a escribir la aplicación de la función. Podría haber optado por aplicar la función a los argumentos sin reducir. Esto habría dado el siguiente orden de reducción:
 \begin{lstlisting}
 $\,\,\,$   sumOfSquares(3, 2+2)
 $\rightarrow$  square(3) + square(2+2)
@@ -444,18 +441,9 @@ $\rightarrow$  9 + 16
 $\rightarrow$  25
 \end{lstlisting}
 
-The second evaluation order is known as \emph{call-by-name},
-whereas the first one is known as \emph{call-by-value}.  For
-expressions that use only pure functions and that therefore can be
-reduced with the substitution model, both schemes yield the same final
-values.  
+La segunda evaluación se conoce como \emph{llamada-por-nombre} ({\em call-by-name} en inglés), mientras que la primera se conoce como \emph{llamada-por-valor} ({\em call-by-value} en inglés). Como en las funciones solo se usan puras expresiones, se pueden reducir con el modelo de sustitución, y con ambos esquemas se obtiene al final el mismo resultado.
 
-Call-by-value has the advantage that it avoids repeated evaluation of
-arguments. Call-by-name has the advantage that it avoids evaluation of
-arguments when the parameter is not used at all by the function.
-Call-by-value is usually more efficient than call-by-name, but a
-call-by-value evaluation might loop where a call-by-name evaluation
-would terminate. Consider:
+\emph{Llamada-por-valor} tiene la ventaja de que evita la evaluación repetida de argumentos. \emph{Llamada-por-nombre} tiene la ventaja de que evita la evaluación de argumentos cuando el parámetro no es utilizado por la función en absoluto. \emph{Llamada-por-valor} suele ser más eficiente que \emph{llamar-por-nombre}, pero una evaluación de \emph{llamada-por-valor} puede ocasionar bucles donde una evaluación de \emph{llamada-por-nombre} terminaría. Considere lo siguiente:
 \begin{lstlisting}
 scala> def loop: Int = loop
 loop: Int
@@ -463,17 +451,14 @@ loop: Int
 scala> def first(x: Int, y: Int) = x
 first: (Int,Int)Int
 \end{lstlisting}
-Then \code{first(1, loop)} reduces with call-by-name to \code{1},
-whereas the same term reduces with call-by-value repeatedly to itself,
-hence evaluation does not terminate.
+Entonces \code{first(1, loop)} se reduce con \emph{llamada-por-nombre} a \code{1}, mientras que si el mismo término se reduce con \emph{llamada-por-valor}, lo hará varias veces en sí mismo, y por lo tanto, la evaluación no terminará nunca.
 \begin{lstlisting}
 $\,\,\,$   first(1, loop)
 $\rightarrow$  first(1, loop)
 $\rightarrow$  first(1, loop)
 $\rightarrow$  ...
 \end{lstlisting}
-Scala uses call-by-value by default, but it switches to call-by-name evaluation
-if the parameter type is preceded by \code{=>}.
+Scala utiliza \emph{llamada-por-valor} por defecto, pero puede cambiar a evaluar con \emph{llamada-por-nombre} si el tipo de parámetro está precedido por \code{=>}.
 
 \example\ 
  
@@ -484,8 +469,8 @@ constOne: (Int,=> Int)Int
 scala> constOne(1, loop)
 unnamed0: Int = 1
 
-scala> constOne(loop, 2)               // gives an infinite loop.
-^C                                     // stops execution with Ctrl-C
+scala> constOne(loop, 2)               // ejecuta un bucle infinito.
+^C                                     // se detiene con Ctrl+C
 \end{lstlisting}
 
 \section{Conditional Expressions}
