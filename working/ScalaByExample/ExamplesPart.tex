@@ -226,7 +226,7 @@ de definir su cuerpo o de definir sus expresiones.
 \chapter{Programando con Actores y Mensajes}
 \label{chap:example-auction}
 
-Aquí tenemos un ejemplo que muestra un área de aplicación para la cual Scala es particularmente bueno. Considere la tarea de implementar un servicio electrónico de subastas. Usamos un modelo de procesamiento de actores (en inglés, {\em actor process model}) al estilo Erlang para implementar a los participantes de la subasta. Los “actores” son objetos que pueden enviar mensajes. Cada actor tiene una “bandeja de entrada” donde llegan los mensajes, que son representados como una cola. Puede trabajar secuencialmente la cola de mensajes en su bandeja de entrada, o realizar una búsqueda de patrones en los mensajes.
+Aquí tenemos un ejemplo que muestra un área de aplicación para la cual Scala es particularmente bueno. Considere la tarea de implementar un servicio electrónico de subastas. Usamos un modelo de procesamiento de actores (en inglés, {\em actor process model}) al estilo Erlang para implementar a los participantes de la subasta. Los “actores” son objetos que pueden enviar mensajes. Cada actor tiene una “bandeja de entrada” o buzón, donde llegan los mensajes, que son representados como una cola. Puede trabajar secuencialmente la cola de mensajes en su bandeja de entrada, o realizar una búsqueda de patrones en los mensajes.
 
 \begin{lstlisting}[style=floating,label=fig:simple-auction-msgs,caption=Clases de mensajes para un servicio de Subastas.]
 import scala.actors.Actor
@@ -251,7 +251,7 @@ Como primer paso, se definen los mensajes que se intercambian durante una subast
 
 \begin{lstlisting}[style=floating,label=fig:simple-auction,caption=Implementación de un servicio de subastas.]
 class Auction(seller: Actor, minBid: Int, closing: Date) extends Actor {
-  val timeToShutdown = 36000000  // msec
+  val timeToShutdown = 36000000  // milisegundos
   val bidIncrement = 10
   def act() {
     var maxBid = minBid - bidIncrement
@@ -318,27 +318,22 @@ arriba se ofrecen como métodos en la biblioteca de clases \code{Actor}. Esta cl
 implementada en Scala, basadose en el modelo hilo conductor(en inglés, 
 {\em underlying thread model}) de la lengua huésped (por ejemplo, Java 
 o .NET\footnote{Aunque el compilador oficial de Scala está escrito en Java para 
-ser usado con la JMV, existe una versión escrita para la plataforma .NET; 
+ser usado con la JMV, existe una versión escrita en C\# para la plataforma .NET; 
 cabe anotar, que es una versión desactualizada del lenguaje Scala.}).
 La aplicación de todas las características de la clase \code{Actor} se verán más 
 adelante en la sección~\ref{sec:actors}
 
+
 Las ventajas del enfoque basado en bibliotecas, son la sencillez relativa del núcleo del lenguaje y la flexibilidad para quienes diseñan bibliotecas. Debido a que no es necesario especificar los detalles del proceso de comunicación de alto nivel el núcleo del lenguaje, este se puede mantener más simple y más general. Debido a que el particular modelo de los mensajes en un buzón(bandeja de entrada) es un módulo de una biblioteca, este puede ser modificado libremente si se hace necesario un modelo diferente en alguna aplicación. El enfoque requiere sin embargo que el núcleo del lenguaje sea lo suficientemente expresivo como para proporcionar las abstracciones lingüísticas necesarias en una forma conveniente. Scala ha sido diseñado con esto en mente, uno de los principales objetivos en su diseño es que debe ser lo suficientemente flexible para actuar como un idioma práctico para acoger lenguajes de dominio específico aplicados mediante módulos de biblioteca. Por ejemplo, los constructos de comunicación del actor presentado anteriormente, puede considerarse como un lenguaje de dominio específico de ese tipo, que conceptualmente extiende el núcleo Scala. 
 
 
-\chapter{\label{chap:simple-funs}Expressions and Simple Functions}
+\chapter{\label{chap:simple-funs}Expreciones y Funciones Simples}
 
-The previous examples gave an impression of what can be done with
-Scala.  We now introduce its constructs one by one in a more
-systematic fashion. We start with the smallest level, expressions and
-functions.
+Los ejemplos anteriores dan una impresión de lo que se puede hacer con Scala. Ahora introduciremos los constructos uno por uno de una manera más sistemática. Comenzamos con el nivel más pequeño, las expresiones y las funciones.
 
-\section{Expressions And Simple Functions}
+\section{Expreciones y Funciones Simples}
 
-A Scala system comes with an interpreter which can be seen as a fancy
-calculator. A user interacts with the calculator by typing in
-expressions. The calculator returns the evaluation results and their
-types. For example:
+Scala viene con un intérprete que puede ser visto como una calculadora de lujo (Esto será común a programadores que conzcan Python o Ruby, que son lenguajes que también vienen con interprete). El usuario interactúa con la calculadora, escribiendo expresiones. La calculadora devuelve los resultados de la evaluación y sus tipos. Por ejemplo:
 
 \begin{lstlisting}
 scala> 87 + 145
@@ -347,11 +342,10 @@ unnamed0: Int = 232
 scala> 5 + 2 * 3
 unnamed1: Int = 11
 
-scala> "hello" + " world!"
-unnamed2: java.lang.String = hello world!
+scala> "hola" + " mundo!"
+unnamed2: java.lang.String = hola mundo!
 \end{lstlisting}
-It is also possible to name a sub-expression and use the name instead
-of the expression afterwards:
+También es posible nombrar una sub-expresión y después usar su nombre en lugar de la expresión:
 \begin{lstlisting}
 scala> def scale = 5
 scale: Int
@@ -363,54 +357,38 @@ unnamed3: Int = 35
 scala> def pi = 3.141592653589793
 pi: Double
 
-scala> def radius = 10
-radius: Int
+scala> def radio = 10
+radio: Int
 
-scala> 2 * pi * radius
+scala> 2 * pi * radio
 unnamed4: Double = 62.83185307179586
 \end{lstlisting}
-Definitions start with the reserved word \code{def}; they introduce a
-name which stands for the expression following the \code{=} sign.  The
-interpreter will answer with the introduced name and its type.
+Las definiciones comienzan con la palabra reservada \code{def}; esto asigna un nombre que hace de sinónimo de la expresión que va despues del signo \code{=}. El intérprete responderá con el nombre asignado y su tipo.
 
-Executing a definition such as \code{def x = e} will not evaluate the
-expression \code{e}.  Instead \code{e} is evaluated whenever \code{x}
-is used. Alternatively, Scala offers a value definition 
-\code{val x = e}, which does evaluate the right-hand-side \code{e} as part of the
-evaluation of the definition. If \code{x} is then used subsequently,
-it is immediately replaced by the pre-computed value of
-\code{e}, so that the expression need not be evaluated again.
+Al ejecutar una definición como \code{def x = e} no se evaluará la expresión \code{e}. En su lugar, \code{e} se evalúa cada vez que \code{x} se utiliza. Por otra parte, Scala ofrece otro estilo de definición: \code{val x = e}, que evalúa el lado derecho \code{e} como parte de la evaluación de la definición. Si \code{x} se utiliza posteriormente, es inmediatamente sustituido por el valor pre-computado de \code{e}, por lo que la expresión no tiene que ser evaluada de nuevo.
  
-How are expressions evaluated? An expression consisting of operators
-and operands is evaluated by repeatedly applying the following
-simplification steps.
+¿Cómo son evaluadas las expresiones? Una expresión consta de operadores y operandos, y se evalúa en repetidas ocasiones aplicando siguientes medidas simplificadas.
 \begin{itemize}
-\item pick the left-most operation
-\item evaluate its operands
-\item apply the operator to the operand values.
-\end{itemize}
-A name defined by \code{def}\ is evaluated by replacing the name by the
-(unevaluated) definition's right hand side. A name defined by \code{val} is
-evaluated by replacing the name by the value of the definitions's
-right-hand side.  The evaluation process stops once we have reached a
-value. A value is some data item such as a string, a number, an array,
-or a list.
+\item Seleccionar la operación más a la izquierda
+\item evaluar esos operandos
+\item aplicar el operador a los valores operandos.
+\end {itemize}
+Un nombre definido por \code{def}\ se evalúa sustituyendo el nombre por la definición (sin evaluar) de la mano derecha. Un nombre definido por \code{val} se evalúa sustituyendo el nombre por el valor de la definición de la mano derecha. El proceso de evaluación se detiene una vez que han alcanzado un valor. Un valor es un elemento de datos como una cadena, un número, una matriz, o una lista.
 
 \example
-Here is an evaluation of an arithmetic expression.
+Aquí hay una evaluación de una expresión aritmética.
 \begin{lstlisting}
-$\,\,\,$   (2 * pi) * radius
-$\rightarrow$  (2 * 3.141592653589793) * radius
-$\rightarrow$  6.283185307179586 * radius
+$\,\,\,$   (2 * pi) * radio
+$\rightarrow$  (2 * 3.141592653589793) * radio
+$\rightarrow$  6.283185307179586 * radio
 $\rightarrow$  6.283185307179586 * 10
 $\rightarrow$  62.83185307179586
 \end{lstlisting}
-The process of stepwise simplification of expressions to values is
-called {\em reduction}.
+El proceso de simplificación gradual de las expresiones a valores se conoce como {\em reducción}.
 
-\section{Parameters}
+\section{Parámetros}
 
-Using \code{def}, one can also define functions with parameters. For example:
+Usando \code{def}, también es posible definir funciones con parámetros. Por ejemplo:
 \begin{lstlisting}
 scala> def square(x: Double) = x * x
 square: (Double)Double
@@ -431,23 +409,13 @@ scala> sumOfSquares(3, 2 + 2)
 unnamed3: Double = 25.0
 \end{lstlisting}
 
-Function parameters follow the function name and are always enclosed
-in parentheses.  Every parameter comes with a type, which is indicated
-following the parameter name and a colon.  At the present time, we
-only need basic numeric types such as the type \code{scala.Double} of
-double precision numbers. Scala defines {\em type aliases} for some
-standard types, so we can write numeric types as in Java. For instance
-\code{double} is a type alias of \code{scala.Double} and \code{int} is
-a type alias for \code{scala.Int}.
+Los parámetros de una función van despues de su nombre y están siempre entre paréntesis. Todos los parámetros viene con un tipo, que se indica a continuación del nombre del parámetro y dos puntos (:). 
+%Actualmente, sólo necesitamos los tipos numéricos básicos tales como el tipo \code{scala.Double} para números de doble precisión. Scala define {\em tipos alias} para algunos tipos estándar, así que podemos escribir los tipos numéricos como en Java. Por ejemplo \code{double} es un alias de tipo de \code{scala.Double} y \code{int} es un alias de tipo de \code{scala.Int}.
+%OJO!! ESTO YA NO ES CIERTO EN SCALA 2.9!!!!!!!
 
-Functions with parameters are evaluated analogously to operators in
-expressions. First, the arguments of the function are evaluated (in
-left-to-right order). Then, the function application is replaced by
-the function's right hand side, and at the same time all formal
-parameters of the function are replaced by their corresponding actual
-arguments.
+Las funciones con parámetros se evalúan de forma análoga a los operadores en las expresiones. En primer lugar, los argumentos de la función se evalúan (en orden de izquierda a derecha). A continuación, la función aplicada se sustituye por las funciónes que están a su lado derecho, y al mismo tiempo todos los parámetros formales de la función son reemplazados por sus argumentos reales correspondientes.
 
-\example\ 
+\example\
  
 \begin{lstlisting}
 $\,\,\,$   sumOfSquares(3, 2+2)
