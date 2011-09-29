@@ -4,7 +4,7 @@
 
 **EN ESTE REPOSITORIO MANTENDRÉ LA TRADUCCIÓN DE ALGUNOS DE LOS DOCUMENTOS DE SCALA TEMPORALMENTE!!**
 
-Si tienen un Linux basado en Debian, para editar más cómodamente en latex, instale lo siguiente, tenga en cuenta que son muchos megabytes (unos 500MB):
+Si tienes un Linux basado en Debian, para editar más cómodamente en latex, instala lo siguiente, ten en cuenta que son muchos megabytes (unos 500MB):
 
 > $ sudo aptitude install texmaker texlive-lang-spanish xfonts-scalable texlive-fonts-extra
 
@@ -18,7 +18,7 @@ Para no tener problemas con los fonts, ejecutamos lo siguiente para bajar varias
 Como trabajar
 =============
 
-La idea es dejar el directorio *src/* queito, y utilizarlo para cuando queramos ver como estaba el .tex original, sería algo así como un BackUp. Por el contrario, el directorio *working/*, como su nombre lo indica, es para ir trabajando. En él estará una carpeta por cada proyecto de traducción.
+La idea es dejar el directorio *src/* quieto, y utilizarlo para cuando queramos ver como estaba el .tex original, sería algo así como un BackUp. Por el contrario, el directorio *working/*, como su nombre lo indica, es para ir trabajando. En él estará una carpeta por cada proyecto de traducción.
 
 Por el momento, solo está **Scala by Example**.
 

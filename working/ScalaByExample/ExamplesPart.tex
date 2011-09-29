@@ -473,14 +473,9 @@ scala> constOne(loop, 2)               // ejecuta un bucle infinito.
 ^C                                     // se detiene con Ctrl+C
 \end{lstlisting}
 
-\section{Conditional Expressions}
+\section{Expresiones Condicionales}
 
-Scala's \code{if-else} lets one choose between two alternatives.  Its
-syntax is like Java's \code{if-else}. But where Java's \code{if-else}
-can be used only as an alternative of statements, Scala allows the
-same syntax to choose between two expressions. That's why Scala's
-\code{if-else} serves also as a substitute for Java's conditional
-expression \code{ ... ? ... : ...}.
+El \code{if-else} de Scala permite elegir una entre dos posibilidades. Su sintaxis es como la de Java, pero donde el \code{if-else} de Java sólo se puede utilizar para elegir entre varios estados, el de Scala permite la misma sintaxis que cuando se elege entre dos expresiones. Por eso el \code{if-else} Scala sirve también como un sustituto de la expresión condicional de Java \code{... ? ... : ...}.
 
 \example\ 
 
@@ -488,29 +483,17 @@ expression \code{ ... ? ... : ...}.
 scala> def abs(x: Double) = if (x >= 0) x else -x
 abs: (Double)Double
 \end{lstlisting}
-Scala's boolean expressions are similar to Java's; they are formed
-from the constants
-\code{true} and
-\code{false}, comparison operators, boolean negation \code{!} and the
-boolean operators $\,$\code{&&}$\,$ and $\,$\code{||}.
+Las expresiones booleanas en Scala son similares a Java, se forman a partir de las constantes \code{true} y \code{false}, de operadores de comparación, con la negación booleana \code{!} y con los operadores booleanos \code{&&} y \code{||}.
 
-\section{\label{sec:sqrt}Example: Square Roots by Newton's Method}
+\section{\label{sec:sqrt}Ejemplo: raíces cuadradas por el método de Newton}
 
-We now illustrate the language elements introduced so far in the
-construction of a more interesting program. The task is to write a
-function
+Ahora ilustraremos los elementos del lenguaje que hemos introducido hasta ahora con la construcción de un programa más interesante. La tarea consiste en escribir una función
 \begin{lstlisting}
 def sqrt(x: Double): Double = ...
 \end{lstlisting}
-which computes the square root of \code{x}.
+que calcula la raíz cuadrada de \code{x}.
 
-A common way to compute square roots is by Newton's method of
-successive approximations. One starts with an initial guess \code{y}
-(say: \code{y = 1}). One then repeatedly improves the current guess
-\code{y} by taking the average of \code{y} and \code{x/y}.  As an
-example, the next three columns indicate the guess \code{y}, the
-quotient \code{x/y}, and their average for the first approximations of
-$\sqrt 2$.
+Una forma habitual de calcular raíces cuadradas es con el método de aproximaciones sucesivas de Newton. Uno comienza con una conjetura inicial \code{y} (por ejemplo: \code{y = 1}). Entonces se intenta mejorar varias veces la actual suposición \code{y} tomando el promedio de \code{y} y de  \code{x/y}. A modo de ejemplo, las tres columnas indican la conjetura \code{y}, el cociente \code{x/y}, y su promedio para la primera aproximación de $ \sqrt 2 $.
 \begin{lstlisting}
 1            2/1 = 2               1.5
 1.5          2/1.5 = 1.3333        1.4167
@@ -519,30 +502,19 @@ $\sqrt 2$.
 
 $y$            $x/y$                   $(y + x/y)/2$
 \end{lstlisting}
-One can implement this algorithm in Scala by a set of small functions,
-which each represent one of the elements of the algorithm.  
+Se puede aplicar este algoritmo en Scala con un conjunto de pequeñas funciones, que representan cada uno de los elementos del algoritmo.
 
-We first define a function for iterating from a guess to the result:
+En primer lugar, se define una función para la iteración de una conjetura que resulta así:
 \begin{lstlisting}
 def sqrtIter(guess: Double, x: Double): Double =
   if (isGoodEnough(guess, x)) guess
   else sqrtIter(improve(guess, x), x)
 \end{lstlisting}
-Note that \code{sqrtIter} calls itself recursively.  Loops in
-imperative programs can always be modeled by recursion in functional
-programs. 
+Tenga en cuenta que \code{sqrtIter} se llama de forma recursiva. Los bucles en los programas imperativos siempre pueden ser modelados por recursividad en programas funcionales.
 
-Note also that the definition of \code{sqrtIter} contains a return
-type, which follows the parameter section. Such return types are
-mandatory for recursive functions. For a non-recursive function, the
-return type is optional; if it is missing the type checker will
-compute it from the type of the function's right-hand side. However,
-even for non-recursive functions it is often a good idea to include a
-return type for better documentation.
+Tenga en cuenta también que la definición de \code{sqrtIter} contiene un tipo de retorno, que va despues de la sección de parámetros. Para las funciones recursivas el tipo de retorno es obligatoro. Para una función no recursiva, el tipo de retorno es opcional, si no se encuentra el tipo de retorno,lo calculará del lado derecho de la función. Sin embargo, incluso para las funciones no recursivas, a menudo es una buena idea incluir un tipo de retorno para una mejor documentación.
 
-As a second step, we define the two functions called by
-\code{sqrtIter}: a function to \code{improve} the guess and a
-termination test \code{isGoodEnough}. Here is their definition.
+En segundo lugar, definimos las dos funciones llamadas por \code{sqrtIter}: una función \code{improve} ({\em mejorar}, en español) para mejorar la respuesta, y una prueba para determinar el fin del ciclo \code{isGoodEnough} ({\em es suficientemente bueno}, en español). He aquí su definición.
 \begin{lstlisting}
 def improve(guess: Double, x: Double) =
   (guess + x / guess) / 2
@@ -551,19 +523,15 @@ def isGoodEnough(guess: Double, x: Double) =
   abs(square(guess) - x) < 0.001
 \end{lstlisting}
 
-Finally, the \code{sqrt} function itself is defined by an application
-of \code{sqrtIter}.
+Por último, la misma función \code{sqrt} se define aplicando \code{sqrtIter}.
 \begin{lstlisting}
 def sqrt(x: Double) = sqrtIter(1.0, x)
 \end{lstlisting}
 
-\begin{exercise} The \code{isGoodEnough} test is not very precise for small
-numbers and might lead to non-termination for very large ones (why?).
-Design a different version of \code{isGoodEnough} which does not have
-these problems.
+\begin{exercise} La prueba \code{isGoodEnough} no es muy precisa para un número pequeño y podría no terminar con números muy grandes (¿por qué?). Diseñe una versión diferente de \code{isGoodEnough} que no tenga estos problemas.
 \end{exercise}
 
-\begin{exercise} Trace the execution of the \code{sqrt(4)} expression.
+\begin{exercise} Haga el seguimiento cuando se ejecuta la expresión \code{sqrt(4)}.
 \end{exercise}
 
 \section{Nested Functions}
